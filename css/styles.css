@@ -1,7 +1,96 @@
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem;
+/* ====================================
+  Responsive Navigation - Flexbox
+==================================== */
+
+.main-header,
+.navigation {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header {
+	padding: 1.5em 0;
+}
+
+.site-logo {
+  /* width: 110px; */
+	align-self: center;
+}
+
+.navigation {
+	margin-top: 1em;
+}
+
+.navigation a {
+	display: block;
+	color: #797e83;
+	font-size: 1.125em;
+	font-weight: 300;
+	text-align: center;
+	padding: .4em;
+	border-bottom: 1px solid #ebecec;
+}
+
+.navigation a:hover {
+	color: #0b0b0b;
+	border-bottom-color: #52bab3;
+}
+
+/* ------------------------------------
+  Navigation Media Queries - Flexbox
+------------------------------------ */
+
+@media screen and (min-width: 769px) {
+
+	.main-header {
+	  padding: 1em 0;
+		justify-content: flex-end;
+	}
+
+  /* .site-logo {
+       width: 140px;
+  } */
+
+	.navigation {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.navigation a {
+		border-bottom-color: transparent;
+	}
+
+}
+
+@media screen and (min-width: 1025px) {
+	.main-header {
+		flex-direction: row;
+	}
+	.site-logo {
+		margin-right: auto;
+	}
+	.navigation {
+		margin-top: 0;
+		align-self: center;
+	}
+	.navigation li {
+		margin-left: .65em;
+		margin-right: .65em;
+	}
+}
+
+/* ====================================
+  Responsive Gallery - Flexbox
+==================================== */
+
+.background-1 {
+  background: green;
+  padding: 2.5em 0;
+}
+
+.background-2 {
+  background: blue;
+  padding: 2.5em 0;
 }
 
 .cell img {
@@ -15,6 +104,10 @@
 .cell {
   margin: 1rem;
 }
+
+/* ------------------------------------
+  Gallery Media Queries - Flexbox
+------------------------------------ */
 
 @media screen and (min-width: 600px) {
   .grid {
@@ -32,4 +125,59 @@
   .cell {
     width: calc(33.3333% - 2rem);
   }
+}
+
+/* ====================================
+  Sticky Footer  
+==================================== */
+
+.sticky-footer {
+  min-height: calc(100vh - 84px);
+}
+
+footer {
+  background: #6C7A89;
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+}
+
+/* ====================================
+  Basic Global Styles 
+==================================== */
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  min-height: 100vh;
+  color: #797e83;
+  font-size: 1em;
+	margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; 
+}
+
+h1 {
+	font-size: 1.6em;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; 
+}
+
+a {
+  color: #656a6e;
+  text-decoration: none;
+  font-weight: 400; 
 }
