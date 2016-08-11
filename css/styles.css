@@ -1,4 +1,25 @@
 /* ====================================
+  Back To Top Button - JQuery CDN
+==================================== */
+
+a.back-to-top {
+  display: none;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  background: green url('../img/up-arrow.png') no-repeat center 43%;
+  text-indent: -9999px;
+  transition: all 0.8s;
+  box-shadow: 1px 1px 5px #333;
+}
+
+a:hover.back-to-top {
+  background-color: #000;
+}
+
+/* ====================================
   Responsive Navigation - Flexbox
 ==================================== */
 
@@ -63,6 +84,7 @@
 }
 
 @media screen and (min-width: 1025px) {
+
 	.main-header {
 		flex-direction: row;
 	}
@@ -77,20 +99,34 @@
 		margin-left: .65em;
 		margin-right: .65em;
 	}
+
 }
 
 /* ====================================
   Responsive Gallery - Flexbox
 ==================================== */
 
-.background-1 {
-  background: green;
-  padding: 2.5em 0;
+.background-space {
+  padding: 40px 0;
 }
 
+.background-1 {
+  background: mediumblue;
+}
 .background-2 {
-  background: blue;
-  padding: 2.5em 0;
+  background: pink;
+}
+.background-3 {
+  background: orangered;
+}
+.background-4 {
+  background: purple;
+}
+.background-5 {
+  background: mediumaquamarine;
+}
+.background-6 {
+  background: yellow;
 }
 
 .cell img {
@@ -166,7 +202,8 @@ body {
 }
 
 h1 {
-	font-size: 1.6em;
+  margin: 0;
+	font-size: 1.75em;
 }
 
 ul,
