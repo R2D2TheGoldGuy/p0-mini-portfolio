@@ -9,14 +9,14 @@ a.back-to-top {
   position: fixed;
   bottom: 40px;
   right: 50px;
-  background: green url('../img/up-arrow.png') no-repeat center 43%;
+  background: #22313F url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.8s;
+  transition: all 0.75s;
   box-shadow: 1px 1px 5px #333;
 }
 
 a:hover.back-to-top {
-  background-color: #000;
+  background-color: #1E824C;
 }
 
 /* ====================================
@@ -111,22 +111,22 @@ a:hover.back-to-top {
 }
 
 .background-1 {
-  background: mediumblue;
+  background: #4B77BE;
 }
 .background-2 {
-  background: pink;
+  background: #E67E22;
 }
 .background-3 {
-  background: orangered;
+  background: #F64747;
 }
 .background-4 {
-  background: purple;
+  background: #674172;
 }
 .background-5 {
-  background: mediumaquamarine;
+  background: #65C6BB;
 }
 .background-6 {
-  background: yellow;
+  background: #26A65B;
 }
 
 .cell img {
@@ -140,6 +140,12 @@ a:hover.back-to-top {
 .cell {
   margin: 1rem;
 }
+
+/* ------------------------------------
+  Hover Information - Flexbox JQuery
+------------------------------------ */
+
+
 
 /* ------------------------------------
   Gallery Media Queries - Flexbox
@@ -168,12 +174,12 @@ a:hover.back-to-top {
 ==================================== */
 
 .sticky-footer {
-  min-height: calc(100vh - 84px);
+  min-height: calc(100vh - 99px);
 }
 
 footer {
-  background: #6C7A89;
-  padding: 40px 0;
+  background: #22313F;
+  padding: 55px 0;
   text-align: center;
   color: white;
 }
@@ -194,10 +200,9 @@ footer {
 
 body {
   min-height: 100vh;
-  color: #797e83;
+  color: #fff;
   font-size: 1em;
 	margin: 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5; 
 }
 
