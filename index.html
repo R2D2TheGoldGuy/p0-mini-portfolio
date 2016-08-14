@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Mini Portfolio</title>
-        
+
         <!-- My Styles -->
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <!--/ Note: I did not use Bootstrap or any css Framework because it would be too easy, I want to challenge myself. -->
     </head>
     <body>
-        <div class="sticky-footer"> 
-            
+        <div class="sticky-footer">
+
             <div class="container">
                 <header class="main-header">
                     <a class="site-logo" href="/">
@@ -23,7 +23,7 @@
                     <ul class="navigation">
                         <li><a href="#css">CSS</a></li>
                         <li><a href="#JQuery">JQuery</a></li>
-                        <li><a href="#JavaScript">JavaScript</a></li>                      
+                        <li><a href="#JavaScript">JavaScript</a></li>
                         <li><a href="#C-Sharp">C#</a></li>
                         <li><a href="#iOS">iOS</a></li>
                         <li><a href="#Miscellaneous">Miscellaneous</a></li>
@@ -38,16 +38,16 @@
                     <div class="cell">
                         <h1>CSS</h1>
                     </div>
-                    <div class="grid"> 
+                    <div class="grid">
                         <div class="cell">
                             <a href="https://kenchung1996.github.io/sticky-footer" target="_blank">
                                 <div class="caption">
                                     <img src="img/sticky-footer.jpg" class="responsive-image caption__media" alt="Hi">
                                     <div class="caption__overlay">
-                                        <div class="container">
+                                        <div class="overlay-container">
                                             <h1 class="caption__overlay__title">Sticky Footer</h1>
-                                            <p class="caption__overlay__content"> 
-                                            For this project I've used the css calc function to get the footer to stick to the bottom, 
+                                            <p class="caption__overlay__content">
+                                            For this project I've used the css calc function to get the footer to stick to the bottom,
                                             this is a very simple and effective technique to solve common problems like these.</p>
                                         </div>
                                     </div>
@@ -59,37 +59,37 @@
                                 <div class="caption">
                                     <img src="img/fullscreen-slider.jpg" class="responsive-image caption__media" alt="Hi">
                                     <div class="caption__overlay">
-                                        <div class="container">
+                                        <div class="overlay-container">
                                             <h1 class="caption__overlay__title">CSS Carousel</h1>
-                                            <p class="caption__overlay__content">This not your typical JavaScript Carousel, 
-                                            it uses only css instead. This css carousel has no arrow indicators or bullets, 
+                                            <p class="caption__overlay__content">This not your typical JavaScript Carousel,
+                                            it uses only css instead. This css carousel has no arrow indicators or bullets,
                                             however that is something I can improve on in the future.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>                            
+                            </a>
                         </div>
                         <div class="cell">
                             <a href="https://kenchung1996.github.io/basic-layout" target="_blank">
                                 <div class="caption">
                                     <img src="img/basic-layout.jpg" class="responsive-image caption__media" alt="Hi">
                                     <div class="caption__overlay">
-                                        <div class="container">
+                                        <div class="overlay-container">
                                             <h1 class="caption__overlay__title">Basic Layout</h1>
                                             <p class="caption__overlay__content">
-                                            This project is a static website using only HTML & CSS.
+                                            This project is a static website using only HTML &amp; CSS.
                                             This helped me practice the fundamentals of web development.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>  
+                            </a>
                         </div>
                         <div class="cell">
                             <a href="https://kenchung1996.github.io/responsive-navbar" target="_blank">
                                 <div class="caption">
                                     <img src="img/responsive-navbar.jpg" class="responsive-image caption__media" alt="Hi">
                                     <div class="caption__overlay">
-                                        <div class="container">
+                                        <div class="overlay-container">
                                             <h1 class="caption__overlay__title">Responsive Navbar</h1>
                                             <p class="caption__overlay__content">
                                             A responsive navbar using the flexbox. A good excerise to practice the latest features of css.</p>
@@ -270,22 +270,21 @@
                         </div>
                         <div class="cell">
                             <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
+        </div><!-- End of Sticky Wrap Footer -->
 
-
-        </div><!-- End of Sticky Wrap Footer -->  
         <footer>
             <span>hi</span>
         </footer>
 
     <!-- Using JQuery CDN for Back To Top Button, and more features in the future! -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
     crossorigin="anonymous" type="text/javascript"></script>
-    <script   src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw=" 
+    <script   src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
     crossorigin="anonymous" type="text/javascript"></script>
     <!--/ Note: This is all hand-coded JQuery, I did not use any plugins or frameworks. -->
 
@@ -295,7 +294,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         /* ====================================
-          Smooth Scrolling Nav - CSS Tricks
+            Smooth Scrolling Nav - CSS Tricks
         ==================================== */
         $(function() {
             $('a[href*=#]:not([href=#])').click(function() {
@@ -314,7 +313,7 @@
 
         /* ====================================
           Back To Top Button Using JQuery
-        ==================================== */ 
+        ==================================== */
         $('body').prepend('<a href="#" class="back-to-top">Back To Top</a>'); // Generating an anchor element (Generated Content Using JQuery)
         $(window).scroll(function() {
             if ( $(window).scrollTop() > 1200 ) { // 1200 is the amount of pixels scrolled down!
@@ -325,14 +324,14 @@
         });
         /* ------------------------------------
           Scroll back up the page if clicked!
-        ------------------------------------ */ 
+        ------------------------------------ */
         $('a.back-to-top').click(function() {
             $('body').animate({
                 scrollTop: 0
             }, 1000);
 
             return false;
-        }); 
+        });
     </script>
     <script src="js/overlay.js" type="text/javascript"></script>
     </body>

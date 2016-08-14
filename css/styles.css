@@ -16,7 +16,7 @@ a.back-to-top {
 }
 
 a:hover.back-to-top {
-  background-color: #1E824C;
+  background-color: #67809F;
 }
 
 /* ====================================
@@ -149,11 +149,11 @@ a:hover.back-to-top {
 .caption {
     position: relative;
     overflow: hidden;
-    box-shadow: 1px 1px 10px #333;
-    transition: all 0.66s;
+    box-shadow: 1px 1px 8px #333;
+    transition: all 2s;
 }
 .caption:hover {
-    box-shadow: 1px 1px 40px #86E2D5;
+    box-shadow: 1px 1px 40px #2C3E50;
 }
 .caption__media {
     display: block;
@@ -161,17 +161,24 @@ a:hover.back-to-top {
     max-width: 100%;
     height: auto;
 }
+.overlay-container {
+    margin: 0 auto;
+    padding: 0 2em;
+}
 .caption__overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
     margin: 0 auto 30px;
+    text-align: center;
     color: white;
     transform: translateY(100%);
-    transition: transform .5s ease-out;
+    transition: transform 0.85s ease-in-out;
 }
 
 .caption:hover .caption__overlay {
@@ -199,7 +206,7 @@ a:hover.back-to-top {
     transition: background .3s ease-out;
 }
 .caption:hover::before {
-    background: rgba(34, 49, 63, .85);
+    background: rgba(34, 49, 63, 1);
 }
 
 .caption {
@@ -229,7 +236,7 @@ a:hover.back-to-top {
 }
 
 /* ====================================
-  Sticky Footer  
+  Sticky Footer
 ==================================== */
 
 .sticky-footer {
@@ -244,7 +251,7 @@ footer {
 }
 
 /* ====================================
-  Basic Global Styles 
+  Basic Global Styles
 ==================================== */
 
 .container {
@@ -254,7 +261,7 @@ footer {
 }
 
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
@@ -262,7 +269,7 @@ body {
   color: #fff;
   font-size: 1em;
 	margin: 0;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 h1 {
@@ -274,11 +281,11 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 a {
   color: #656a6e;
   text-decoration: none;
-  font-weight: 400; 
+  font-weight: 400;
 }
