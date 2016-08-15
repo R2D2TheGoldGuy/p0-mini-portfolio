@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300|Roboto:300';
+
 /* ====================================
   Back To Top Button - JQuery CDN
 ==================================== */
@@ -9,14 +11,14 @@ a.back-to-top {
   position: fixed;
   bottom: 40px;
   right: 50px;
-  background: #22313F url('../img/up-arrow.png') no-repeat center 43%;
+  background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.75s;
-  box-shadow: 1px 1px 5px #333;
+  transition: all 0.67s;
+  box-shadow: 1px 1px 5px #282828;
 }
 
 a:hover.back-to-top {
-  background-color: #67809F;
+  background-color: #33BFBF;
 }
 
 /* ====================================
@@ -44,17 +46,18 @@ a:hover.back-to-top {
 
 .navigation a {
 	display: block;
-	color: #797e83;
-	font-size: 1.125em;
-	font-weight: 300;
+	color: #fff;
+  font: 300 1.125em/1.5 'Roboto', sans-serif;
 	text-align: center;
 	padding: .4em;
-	border-bottom: 1px solid #ebecec;
+	border-bottom: 1px solid #67809F;
+  transition: all 0.8s;
 }
 
 .navigation a:hover {
-	color: #0b0b0b;
-	border-bottom-color: #52bab3;
+  background: #182D44;
+	color: #fff;
+	border-bottom-color: #33BFBF;
 }
 
 /* ------------------------------------
@@ -67,19 +70,19 @@ a:hover.back-to-top {
 	  padding: 1em 0;
 		justify-content: flex-end;
 	}
-
   /* .site-logo {
        width: 140px;
   } */
-
 	.navigation {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-
 	.navigation a {
 		border-bottom-color: transparent;
 	}
+  .navigation a:hover {
+    background: none;
+  }
 
 }
 
@@ -99,6 +102,9 @@ a:hover.back-to-top {
 		margin-left: .65em;
 		margin-right: .65em;
 	}
+  .navigation a:hover {
+    border-bottom-color: #33BFBF;
+  }
 
 }
 
@@ -120,18 +126,17 @@ a:hover.back-to-top {
   background: #F64747;
 }
 .background-4 {
-  background: #674172;
+  background: #663399;
 }
 .background-5 {
-  background: #65C6BB;
+  background: darkolivegreen;
 }
 .background-6 {
-  background: #26A65B;
+  background: #272727;
 }
 
 .cell img {
   display: block;
-  transition: all 0.75s;
 }
 
 .responsive-image {
@@ -140,79 +145,6 @@ a:hover.back-to-top {
 
 .cell {
   margin: 1rem;
-}
-
-/* ------------------------------------
-  Hover Information - Flexbox JQuery
------------------------------------- */
-
-.caption {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 1px 1px 10px #333;
-    transition: all 0.8s;
-}
-.caption:hover {
-    box-shadow: 1px 1px 20px #E4F1FE;
-}
-
-.caption-media {
-    display: block;
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-.overlay-container {
-    margin: 0 auto;
-    padding: 0 2em;
-}
-
-.caption-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    margin: 0 auto 30px;
-    text-align: center;
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.85s ease-in-out;
-}
-.caption:hover .caption-overlay {
-    transform: translateY(0);
-}
-
-.caption-overlay-title {
-    margin: 0;
-    padding: 0 0 10px;
-    transition: transform .35s ease-out;
-}
-
-.caption:hover .caption-overlay-title {
-    transform: translateY(0);
-}
-
-.caption::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: transparent;
-    transition: background .3s ease-out;
-}
-.caption:hover::before {
-    background: rgba(34, 49, 63, 1);
-}
-
-.caption {
-    transform: translateZ(0);
 }
 
 /* ------------------------------------
@@ -242,14 +174,34 @@ a:hover.back-to-top {
 ==================================== */
 
 .sticky-footer {
-  min-height: calc(100vh - 99px);
+  min-height: calc(100vh - 54px);
 }
 
-footer {
+.bottom-footer,
+.footer-nav {
+  padding: 20px 0;
+}
+.bottom-footer {
   background: #22313F;
-  padding: 55px 0;
-  text-align: center;
-  color: white;
+}
+.footer-nav {
+  background: #2C3E50;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .footer-cell {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer-cell {
+    width: 25%;
+  }
 }
 
 /* ====================================
@@ -262,21 +214,27 @@ footer {
   padding: 0 1rem;
 }
 
+#about .container,
+#contact .container,
+.footer-nav .container {
+  padding: 0 2rem;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
+  font: 300 1em/1.5 'Lato', sans-serif;
+  background: #243A4F; /* Navigation Color */
   color: #fff;
-  font-size: 1em;
 	margin: 0;
-  line-height: 1.5;
 }
 
-h1 {
+h1,
+h2 {
   margin: 0;
-	font-size: 1.75em;
+  font: 100 1.75em/1.5 'Roboto', sans-serif;
 }
 
 ul,
@@ -290,4 +248,71 @@ a {
   color: #656a6e;
   text-decoration: none;
   font-weight: 400;
+}
+
+/* ------------------------------------
+  Hover Information - Flexbox JQuery
+------------------------------------ */
+
+.caption {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px #282828;
+    transition: all 0.8s;
+}
+.caption:hover {
+    box-shadow: 1px 1px 15px #E4F1FE;
+}
+.caption-media {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.overlay-container {
+    margin: 0 auto;
+    padding: 0 2em;
+}
+.caption-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.75s ease-in-out;
+}
+.caption:hover .caption-overlay {
+    transform: translateY(0);
+}
+.caption-overlay-title {
+    margin: 0;
+    padding: 0 0 10px;
+    transition: transform .35s ease-out;
+}
+
+.caption:hover .caption-overlay-title {
+    transform: translateY(0);
+}
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .3s ease-out;
+}
+.caption:hover::before {
+    background: rgba(34, 49, 63, 1);
+}
+
+.caption {
+    transform: translateZ(0);
 }
