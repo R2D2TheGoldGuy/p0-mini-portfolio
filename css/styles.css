@@ -216,7 +216,8 @@ a:hover.back-to-top {
 
 #about .container,
 #contact .container,
-.footer-nav .container {
+.footer-nav .container,
+.bottom-footer .container {
   padding: 0 2rem;
 }
 
