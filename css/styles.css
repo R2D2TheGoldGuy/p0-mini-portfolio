@@ -40,6 +40,10 @@ a:hover.back-to-top {
   /* width: 110px; */
 	align-self: center;
 }
+.site-logo img {
+  width: 75px;
+  margin-bottom: -6px;
+}
 
 .navigation {
 	margin-top: 1em;
@@ -118,10 +122,10 @@ a:hover.back-to-top {
   background: #4B77BE;
 }
 .background-2 {
-  background: #F9690E;
+  background: #E58585;
 }
 .background-3 {
-  background: #F64747;
+  background: #D24D57;
 }
 .background-4 {
   background: #663399;
@@ -192,6 +196,7 @@ a:hover.back-to-top {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-content: center !important;
   }
   .footer-cell {
     width: 50%;
@@ -213,15 +218,10 @@ a:hover.back-to-top {
   padding: 0 1rem;
 }
 
-/* Gallery Containers */
 #css .css-headline,
 #JQuery .jquery-headline,
 #JavaScript .javascript-headline,
-#Miscellaneous .miscellaneous-headline {
-  padding: 0 2rem;
-}
-
-/* Non-gallery containers */
+#Miscellaneous .miscellaneous-headline,
 #about .container,
 #contact .container,
 .footer-nav .container,
@@ -232,31 +232,33 @@ a:hover.back-to-top {
 * {
   box-sizing: border-box;
 }
-
 body {
   font: 300 1em/1.5 'Lato', sans-serif;
   background: #243A4F; /* Navigation Color */
   color: #fff;
 	margin: 0;
 }
-
 h1,
 h2 {
   margin: 0;
   font: 100 1.75em/1.5 'Roboto', sans-serif;
 }
-
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
 a {
   color: #656a6e;
   text-decoration: none;
   font-weight: 400;
+}
+
+/* ---- Text Overlay Base Styles ---- */
+
+h3 {
+	margin: 0;
 }
 
 /* ------------------------------------
@@ -266,11 +268,11 @@ a {
 .caption {
     position: relative;
     overflow: hidden;
-    box-shadow: 1px 1px 4px #282828;
-    transition: box-shadow 0.8s ease-out 0.2s;
+    box-shadow: 0 0 3px #000;
+    transition: box-shadow 0.5s ease 0.25s;
 }
 .caption:hover {
-    box-shadow: 1px 1px 16px #C5EFF7;
+    box-shadow: 0 0 9px 1px #FDE3A7;
 }
 .caption-media {
     display: block;
@@ -315,14 +317,12 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: transparent;
-    transition: background .3s ease-out;
+    background: linear-gradient(to bottom right, #EB974E, #F27935);
+    opacity: 0;
+    transition: opacity 0.75s ease-out;
 }
 .caption:hover::before {
-    background: #243A4F;
-}
-.caption {
-    transform: translateZ(0);
+    opacity: 1;
 }
 
 /* ====================================
@@ -426,10 +426,10 @@ a {
 	display: inline-block;
 	width: 18px;
 	height: 18px;
-	background: url('../img/download.svg');
+	background: url('../img/live-preview.svg');
 	position: absolute;
 	left: 45%;
-	top: 33%;
+	top: 34%;
 }
 
 /* ---- Photo Overlay ---- */
@@ -447,9 +447,6 @@ a {
 	justify-content: center;
 	align-items: center;
 	background: rgba(0,0,0, .65);
-}
-.section-2-overlay h3 {
-	margin: 0;
 }
 
 /* ====================================
@@ -491,9 +488,7 @@ a {
 	align-items: center;
 	background: rgba(0,0,0, .5);
 }
-.section-3-overlay h3 {
-	margin: 0;
-}
+
 .section-3-slide .section-3-button {
 	color: #fff;
 	padding: 20px 0;
@@ -545,4 +540,85 @@ a {
 }
 .section-3-slide:hover img[class="section-3-img"] {
   transform: translateX(100%);
+}
+
+/* =================================
+  3D Hover Information - Misc
+==================================== */
+
+.misc-photo-container {
+	text-align: center;
+}
+
+.misc-photo-container img {
+ 	max-width: 100%;
+ 	position: relative;
+	z-index: 100;
+}
+.button {
+	color: #fff;
+	width: 75%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 20px 0;
+	border-radius: .5em;
+	background: rgba(74,137,202, .8);
+	margin: .3em 0 0;
+}
+.misc-photo {
+	position: relative;
+}
+
+/* ---- Photo Overlay ---- */
+.photo-desc {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #345d88;
+}
+
+/* =================================
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+/* =================================
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.misc-photo-container /* .content { */ { /* giving a perspective to every photo to its container will individually have the same perspective like the one in the middle photo, all 3 photos are now consistent with each other */
+  perspective: 1000px; /* Similar to the flex container, wrap this elements to make it 3d compatible */
+  /* perspective-origin: y x; */ /* sets the perspective from a different angle, 50% 50% makes it centered by default. */
+}
+.misc-photo { /* photo is the parent of side-a and side-b */
+  transition: transform 1.2s cubic-bezier(.55, -.62, .27, 1.2);
+  transform-style: preserve-3d; /* Makes .photo child elements 3d compatible. It will pass down 3d attributes to its children. */
+}
+.misc-photo:hover {
+  /* transform: rotateY(-180deg); */
+  transform: rotate3d(0, 1, 0, 180deg); /* rotate(x, y, z, <angle> */
+}
+.side-a,
+.side-b {
+  backface-visibility: hidden;
+}
+.side-b {
+  transform: rotateY(180deg);
 }
