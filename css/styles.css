@@ -1,6 +1,28 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300|Roboto:300';
 
 /* ====================================
+  Fixed Header - JQuery CDN
+==================================== */
+
+.headerContainerWrapper {
+  width: 100%;
+  position: relative;
+  /* position: static;  Change this if transition doesn't work */
+  background: #243A4F;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transition: top .66s ease;
+}
+/* .headerShadow { Remove this if transition doesn't work
+  position: relative;
+} */
+.activeScroll .headerContainerWrapper {
+  position: fixed;
+  top: 0;
+}
+
+/* ====================================
   Back To Top Button - JQuery CDN
 ==================================== */
 
@@ -41,7 +63,7 @@ a:hover.back-to-top {
 	align-self: center;
 }
 .site-logo img {
-  width: 75px;
+  width: 60px;
   margin-bottom: -6px;
 }
 
