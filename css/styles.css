@@ -145,7 +145,10 @@ a:hover.back-to-top {
 ==================================== */
 
 .background-space {
-  padding: 60px 0;
+  padding: 50px 0;
+}
+.background-space .page-description {
+  padding: 20px 0;
 }
 .background-1 {
   background: #4B77BE;

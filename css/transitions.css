@@ -145,9 +145,9 @@ h3 {
 }
 .btn-icon {
 	transition-property: opacity, left;
-	transition-duration: .33s;
-	transition-delay: .25s, .5s; /* .2s refers to opacity, .4s refers to left */
-	transition-timing-function: ease-in-out, ease; /* ease-in-out refers to opacity, ease-out refers to left */
+	transition-duration: .4s;
+	transition-delay: .2s, .4s; /* .2s refers to opacity, .4s refers to left */
+	transition-timing-function: ease-out, ease; /* ease-in-out refers to opacity, ease-out refers to left */
 }
 .section-2-button:hover .btn-icon {
 	opacity: 1;
