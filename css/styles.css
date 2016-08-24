@@ -13,13 +13,12 @@ a.back-to-top {
   right: 50px;
   background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.67s;
-  box-shadow: 1px 1px 5px #282828;
+  transition: all 0.75s;
+  box-shadow: 0 0 4px #000;
   z-index: 999;
 }
-
 a:hover.back-to-top {
-  background-color: #3A539B;
+  background-color: #182D44;
 }
 
 /* ====================================
@@ -41,7 +40,7 @@ a:hover.back-to-top {
 	align-self: center;
 }
 .site-logo img {
-  width: 60px;
+  width: 50px;
   margin-bottom: -6px;
 }
 
@@ -117,9 +116,10 @@ a:hover.back-to-top {
     position: fixed;
     background: #243A4F;
     z-index: 999;
+    box-shadow: 0 0 10px #282828;
   }
   .overlap-space {
-    padding: 132px 0 40px !important; /* 92px for navigation height, and 40px for page padding top/bottom. */
+    padding-top: 122px !important; /* 92px for navigation height, and 40px for page padding top/bottom. */
   }
 
 }
@@ -232,12 +232,12 @@ a:hover.back-to-top {
   padding: 0 1rem;
 }
 
-#css .css-headline,
-#JQuery .jquery-headline,
-#JavaScript .javascript-headline,
-#Miscellaneous .miscellaneous-headline,
-#about .container,
-#contact .container,
+.css-headline,
+.jquery-headline,
+.javascript-headline,
+.miscellaneous-headline,
+.about-headline,
+.contact-headline,
 .footer-nav .container,
 .bottom-footer .container {
   padding: 0 2rem;
@@ -282,11 +282,10 @@ h3 {
 .caption {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 3px #000;
-    transition: box-shadow 0.5s ease 0.25s;
+    transition: box-shadow 0.5s ease-in-out 0.25s;
 }
 .caption:hover {
-    box-shadow: 0 0 9px 1px #FDE3A7;
+    box-shadow: 0 0 12px 1px #fff;
 }
 .caption-media {
     display: block;
@@ -306,7 +305,7 @@ h3 {
     left: 0;
     display: flex;
     align-items: center;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     text-align: center;
     color: white;
     transform: translateY(100%);
@@ -317,10 +316,9 @@ h3 {
 }
 .caption-overlay-title {
     margin: 0;
-    padding: 0 0 10px;
-    transition: transform .35s ease-out;
+    padding: 0;
+    transition: transform .25s ease;
 }
-
 .caption:hover .caption-overlay-title {
     transform: translateY(0);
 }
@@ -331,9 +329,9 @@ h3 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom right, #EB974E, #F27935);
+    background: linear-gradient(to bottom right, #F89406, #D35400);
     opacity: 0;
-    transition: opacity 0.75s ease-out;
+    transition: opacity 1s ease-out;
 }
 .caption:hover::before {
     opacity: 1;
