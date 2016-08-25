@@ -262,7 +262,10 @@ body {
   color: #fff;
 	margin: 0;
 }
-h1,
+h1 {
+  margin: 0;
+  font: 100 1.75em/1.5 'Roboto', sans-serif;
+}
 h2 {
   margin: 0;
   font: 100 1.75em/1.5 'Roboto', sans-serif;

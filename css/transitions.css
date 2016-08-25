@@ -132,9 +132,9 @@ h3 {
   /* Button Transitions */
   opacity: 0;
   transition-property: opacity, background, box-shadow;
-  transition-duration: .75s;
+  transition-duration: .4s;
   transition-delay: .2s, 0s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease;
 }
 .section-2-button:hover {
 	background: #049372;
