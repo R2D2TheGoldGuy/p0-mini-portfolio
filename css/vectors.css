@@ -1,0 +1,53 @@
+img[src="img/html5-css3-logo.svg"],
+img[src="img/jquery-logo.svg"],
+img[src="img/javascript-logo.svg"] {
+  display: block;
+  margin: 0 auto;
+}
+
+img[src="img/html5-css3-logo.svg"] {
+  width: 175px;
+}
+img[src="img/jquery-logo.svg"] {
+  width: 270px;
+}
+img[src="img/javascript-logo.svg"] {
+  width: 140px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .page-description {
+    text-align: center;
+  }
+  img[src="img/html5-css3-logo.svg"] {
+    width: 200px;
+  }
+  img[src="img/jquery-logo.svg"] {
+    width: 360px;
+  }
+  img[src="img/javascript-logo.svg"] {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .page-description {
+    text-align: inherit;
+  }
+  img[src="img/html5-css3-logo.svg"],
+  img[src="img/jquery-logo.svg"],
+  img[src="img/javascript-logo.svg"] {
+    margin: 0;
+  }
+  img[src="img/html5-css3-logo.svg"] {
+    width: 225px;
+  }
+  img[src="img/jquery-logo.svg"] {
+    width: 440px;
+  }
+  img[src="img/javascript-logo.svg"] {
+    width: 180px;
+  }
+}

@@ -43,7 +43,7 @@ a:hover.back-to-top {
 	align-self: center;
 }
 .site-logo img {
-  width: 55px;
+  width: 50px;
   margin-bottom: -6px;
 }
 
@@ -57,19 +57,26 @@ a:hover.back-to-top {
 	text-align: center;
 	padding: .4em;
   border-bottom: 1px solid #67809F;
-  transition: color 0.5s ease, border 0.5s ease, background 0.5s ease;
+  transition: color 0.4s ease-out, border 0.5s ease, background 0.5s ease;
 }
 .navigation a:hover {
-	color: #fff;
 	border-bottom-color: #33BFBF;
   background: #22313F;
+}
+
+/* ---- Base Page Styles ---- */
+.background-space {
+  padding: 50px 0 40px;
+}
+.background-space .page-description {
+  padding: 32px 0 16px;
 }
 
 /* ------------------------------------
   Navigation Media Queries - Flexbox
 ------------------------------------ */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
 	.main-header {
 	  padding: 1em;
@@ -95,9 +102,9 @@ a:hover.back-to-top {
     height: 3px;
     width: 0px;
     background: transparent;
-    -webkit-transition: width .66s ease, background-color .66s ease;
-    -moz-transition: width .66s ease, background-color .66s ease;
-    transition: width .66s ease, background-color .66s ease;
+    -webkit-transition: width .4s ease, background-color .4s ease;
+    -moz-transition: width .4s ease, background-color .4s ease;
+    transition: width .4s ease, background-color .4s ease;
   }
   .navigation a:hover::after {
     width: 100%;
@@ -106,7 +113,7 @@ a:hover.back-to-top {
 
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
 	.main-header {
 		flex-direction: row;
@@ -135,7 +142,10 @@ a:hover.back-to-top {
   }
   .overlap-space {
     /* Similar to Bootstrap's Jumbotron default settings. */
-    padding-top: 137px !important; /* 92px for navigation height, and 40px for page padding top/bottom. */
+    padding-top: 202px !important; /* (-82px for carousel) 82px for navigation height, and 50px for page padding top/bottom. */
+  }
+  .background-space {
+    padding: 120px 0 110px;
   }
 
 }
@@ -144,17 +154,11 @@ a:hover.back-to-top {
   Responsive Gallery - Flexbox
 ==================================== */
 
-.background-space {
-  padding: 50px 0;
-}
-.background-space .page-description {
-  padding: 25px 0 0;
-}
 .background-1 {
   background: #4B77BE;
 }
 .background-2 {
-  background: #E58585;
+  background: #BE90D4;
 }
 .background-3 {
   background: #D24D57;
