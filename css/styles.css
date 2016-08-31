@@ -155,13 +155,13 @@ a:hover.back-to-top {
 ==================================== */
 
 .background-1 {
-  background: #4B77BE;
+  background: linear-gradient(#22A7F0, #446CB3);
 }
 .background-2 {
-  background: #BE90D4;
+  background: linear-gradient(to bottom right, #B24926, #FAA523);
 }
 .background-3 {
-  background: #D24D57;
+  background: #292929;
 }
 .background-4 {
   background: #663399;
@@ -175,6 +175,7 @@ a:hover.back-to-top {
 
 .cell img {
   display: block;
+  background: #3A539B;
 }
 
 .responsive-image,
