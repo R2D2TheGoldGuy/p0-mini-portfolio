@@ -1,0 +1,144 @@
+.page-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+img[src="img/logos/html5-css3-logo.svg"] {
+  width: 175px;
+}
+img[src="img/logos/jquery-logo.svg"] {
+  width: 270px;
+}
+img[src="img/logos/javascript-logo.svg"] {
+  width: 140px;
+}
+img[src="img/logos/misc-logo.svg"] {
+  width: 125px;
+}
+img[src="img/logos/about-logo.svg"] {
+  width: 150px;
+}
+/*
+img[src="img/logos/about-logo.svg"] {
+  width: 200px;
+  margin-bottom: 32px;
+} */
+
+.about-me { /* flexbox container */
+  display: flex;
+  flex-direction: column-reverse;
+}
+img[src="img/about-picture.jpg"] {
+  width: 200px;
+  border-radius: 50%;
+}
+img[src="img/about-picture.jpg"] {
+  display: block;
+  margin: 0 auto;
+}
+
+#about-page h2,
+.creator-title,
+.h3-title {
+  text-align: inherit !important;
+}
+#about-page h2 {
+  margin: 1.5em 0 .5em;
+}
+.creator-title {
+  margin-top: 2em;
+}
+.h3-title {
+  margin: 1em 0 .5em;
+}
+.profile-description h3 {
+  padding: 48px 0 0px;
+}
+
+/* ====================================
+  About Page - Title page
+==================================== */
+
+@media screen and (min-width: 768px) {
+
+  img[src="img/about-picture.jpg"] {
+    width: 225px;
+  }
+
+  .page-description {
+    text-align: center;
+  }
+  #about-page .page-description {
+    text-align: inherit;
+  }
+  .profile-description h3 {
+    padding: 0 0 24px;
+  }
+
+  img[src="img/logos/html5-css3-logo.svg"] {
+    width: 200px;
+  }
+  img[src="img/logos/jquery-logo.svg"] {
+    width: 360px;
+  }
+  img[src="img/logos/javascript-logo.svg"] {
+    width: 160px;
+  }
+  img[src="img/logos/misc-logo.svg"] {
+    width: 150px;
+  }
+  img[src="img/logos/about-logo.svg"] {
+    width: 175px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .page-description {
+    text-align: inherit;
+  }
+  .page-logo {
+    margin: 0;
+  }
+
+  /* ========================================
+    About Page - About the Creator
+  ======================================== */
+
+  .about-me { /* flexbox container */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+  img[src="img/about-picture.jpg"] {
+    width: 250px;
+  }
+  .about-me .profile-description {
+    order: 2;
+    flex: 1 50%;
+    padding-right: 64px;
+  }
+  .profile-description p {
+    margin-top: 0;
+  }
+
+  /* SVG Size */
+  img[src="img/logos/html5-css3-logo.svg"] {
+    width: 225px;
+  }
+  img[src="img/logos/jquery-logo.svg"] {
+    width: 440px;
+  }
+  img[src="img/logos/javascript-logo.svg"] {
+    width: 180px;
+  }
+  img[src="img/logos/misc-logo.svg"] {
+    width: 175px;
+  }
+  img[src="img/logos/about-logo.svg"] {
+    width: 200px;
+  }
+}

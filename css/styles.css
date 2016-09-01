@@ -1,6 +1,49 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300|Roboto:300';
 
 /* ====================================
+  Basic Global Styles
+==================================== */
+
+.container { /* General container */
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.headline,
+.footer-nav .container,
+.bottom-footer .container {
+  padding: 0 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 300 1.0625em/1.5 'Lato', sans-serif;
+  background: #243A4F; /* Navigation Color */
+  color: #fff;
+	margin: 0;
+}
+h1 {
+  margin: 0;
+  font: bold 1.5em/1.5 'Roboto', sans-serif;
+}
+h2 {
+  margin: 0;
+  font: bold 1.25em/1.5 'Roboto', sans-serif;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* ====================================
   Back To Top Button - JQuery CDN
 ==================================== */
 
@@ -9,8 +52,8 @@ a.back-to-top {
   width: 55px;
   height: 55px;
   position: fixed;
-  bottom: 40px;
-  right: 50px;
+  bottom: 20px;
+  right: 100px;
   background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
   transition: all 0.75s;
@@ -20,10 +63,6 @@ a.back-to-top {
 a:hover.back-to-top {
   background-color: #182D44;
 }
-
-/* ====================================
-  Responsive Hamburger - CSS/JQuery
-==================================== */
 
 /* ====================================
   Responsive Navigation - Flexbox
@@ -76,8 +115,19 @@ a:hover.back-to-top {
   Navigation Media Queries - Flexbox
 ------------------------------------ */
 
+@media screen and (min-width: 360px) {
+  a.back-to-top {
+    bottom: 25px;
+    right: 35px;
+  }
+}
+
 @media screen and (min-width: 768px) {
 
+  a.back-to-top {
+    bottom: 50px;
+    right: 60px;
+  }
 	.main-header {
 	  padding: 1em;
 		justify-content: flex-end;
@@ -115,6 +165,14 @@ a:hover.back-to-top {
 
 @media screen and (min-width: 1024px) {
 
+  h1 {
+    margin: 0;
+    font: bold 1.625em/1.5 'Roboto', sans-serif;
+  }
+  h2 {
+    margin: 0;
+    font: bold 1.375em/1.5 'Roboto', sans-serif;
+  }
 	.main-header {
 		flex-direction: row;
 	}
@@ -158,19 +216,19 @@ a:hover.back-to-top {
   background: linear-gradient(#22A7F0, #446CB3);
 }
 .background-2 {
-  background: linear-gradient(to bottom right, #B24926, #FAA523);
+  background: linear-gradient(#FAA523, #B24926);
 }
 .background-3 {
-  background: #292929;
+  background: linear-gradient(to top right, #F64747, #F62459);
 }
 .background-4 {
-  background: #663399;
+  background: linear-gradient(to bottom right, #9B59B6, #663399, #674172);
 }
 .background-5 {
-  background: darkolivegreen;
+  background: linear-gradient(to bottom left, #1BA39C, #336E7B);
 }
 .background-6 {
-  background: #272727;
+  background: linear-gradient(to bottom right, #1BA39C, #03A678);
 }
 
 .cell img {
@@ -225,64 +283,4 @@ a:hover.back-to-top {
 }
 .footer-nav {
   background: #2C3E50;
-}
-
-@media screen and (min-width: 600px) {
-  .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center !important;
-  }
-  .footer-cell {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .footer-cell {
-    width: 25%;
-  }
-}
-
-/* ====================================
-  Basic Global Styles
-==================================== */
-
-.container { /* General container */
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-.headline,
-.footer-nav .container,
-.bottom-footer .container {
-  padding: 0 2rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-body {
-  font: 300 1em/1.5 'Lato', sans-serif;
-  background: #243A4F; /* Navigation Color */
-  color: #fff;
-	margin: 0;
-}
-h1 {
-  margin: 0;
-  font: 100 1.75em/1.5 'Roboto', sans-serif;
-}
-h2 {
-  margin: 0;
-  font: 100 1.75em/1.5 'Roboto', sans-serif;
-}
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  font-weight: 400;
 }
