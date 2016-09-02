@@ -5,7 +5,6 @@
 .caption {
     position: relative;
     overflow: hidden;
-    box-shadow: 1px 1px 12px 1px #22313F;
 }
 .caption-media {
     display: block;

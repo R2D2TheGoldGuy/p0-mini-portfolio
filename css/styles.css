@@ -96,11 +96,11 @@ a:hover.back-to-top {
 	text-align: center;
 	padding: .4em;
   border-bottom: 1px solid #67809F;
-  transition: color 0.4s ease-out, border 0.5s ease, background 0.5s ease;
+  transition: letter-spacing 0.4s ease-out, color 0.4s ease-out, border 0.5s ease, background 0.4s ease-out;
 }
 .navigation a:hover {
 	border-bottom-color: #33BFBF;
-  background: #22313F;
+  letter-spacing: 3px;
 }
 
 /* ---- Base Page Styles ---- */
@@ -194,7 +194,7 @@ a:hover.back-to-top {
   .fixed-navigation {
     width: 100%;
     position: fixed;
-    background: #243A4F;/*#22313F */
+    background: #22313F;
     z-index: 999;
     box-shadow: 0 0 10px #282828;
   }
@@ -213,22 +213,34 @@ a:hover.back-to-top {
 ==================================== */
 
 .background-1 {
-  background: linear-gradient(#22A7F0, #446CB3);
+  background: linear-gradient(to bottom right, #2782F9, transparent 105%),
+              linear-gradient(30deg, #446CB3, transparent),
+              url('../img/waves.png') center;
 }
 .background-2 {
-  background: linear-gradient(#FAA523, #B24926);
+  background: linear-gradient(to right, #B24926, transparent 125%),
+              linear-gradient(-90deg, #FAA523, transparent),
+              url('../img/pyramid.png') center;
 }
 .background-3 {
-  background: linear-gradient(to top right, #F64747, #F62459);
+  background: linear-gradient(to bottom right, #6B262C, transparent 100%),
+              linear-gradient(0deg, #51272B, transparent),
+              url('../img/inflicted.png') center;
 }
 .background-4 {
-  background: linear-gradient(to bottom right, #9B59B6, #663399, #674172);
+  background: linear-gradient(to bottom right, #1D5135, transparent 100%),
+              linear-gradient(0deg, #17442C, transparent),
+              url('../img/shapes.png') center;
 }
 .background-5 {
-  background: linear-gradient(to bottom left, #1BA39C, #336E7B);
+  background: linear-gradient(to bottom right, #297384, transparent 100%),
+              linear-gradient(30deg, #336E7B, transparent),
+              url('../img/triangles.png') center;
 }
 .background-6 {
-  background: linear-gradient(to bottom right, #1BA39C, #03A678);
+  background: linear-gradient(to right, #91740A, #A89400, transparent 100%),
+              linear-gradient(-45deg, #9E7A27, transparent),
+              url('../img/tiles.png') center;
 }
 
 .cell img {
@@ -243,6 +255,10 @@ a:hover.back-to-top {
 
 .cell {
   margin: 1rem;
+  box-shadow: 1px 1px 8px 1px #000;
+}
+#Miscellaneous .cell {
+  box-shadow: none !important;
 }
 
 /* ------------------------------------
@@ -250,6 +266,7 @@ a:hover.back-to-top {
 ------------------------------------ */
 
 @media screen and (min-width: 600px) {
+
   .grid {
     display: flex;
     flex-wrap: wrap;
@@ -272,10 +289,12 @@ a:hover.back-to-top {
 ==================================== */
 
 .sticky-footer {
-  min-height: calc(100vh - 54px);
+  min-height: calc(100vh - 65px);
 }
-.bottom-footer,
 .footer-nav {
+  padding: 50px 0;
+}
+.bottom-footer {
   padding: 20px 0;
 }
 .bottom-footer {
@@ -284,3 +303,20 @@ a:hover.back-to-top {
 .footer-nav {
   background: #2C3E50;
 }
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+/* ===
+  Sticky Footer
+==================================== */
