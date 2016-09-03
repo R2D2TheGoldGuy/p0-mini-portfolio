@@ -19,6 +19,10 @@ img[src="img/logos/about-logo.svg"] {
 img[src="img/logos/about-logo.svg"] {
   border-radius: 50%;
 }
+img[alt="Main Logo in SVG Format."] {
+  width: 80px;
+  margin-top: 1.25em;
+}
 /*
 img[src="img/logos/about-logo.svg"] {
   width: 200px;

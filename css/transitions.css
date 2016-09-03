@@ -145,7 +145,7 @@ h3 {
 }
 .section-2-button:hover .btn-icon {
 	opacity: 1;
-	left: 80%;
+	left: 75%;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -160,7 +160,7 @@ h3 {
 	background: url('../img/live-preview.svg');
 	position: absolute;
 	left: 45%;
-	top: 34%;
+	top: 35%;
 }
 
 /* ---- Photo Overlay ---- */
