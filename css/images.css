@@ -3,31 +3,48 @@
   margin: 0 auto;
 }
 
+/* CSS Page */
 img[src="img/logos/html5-css3-logo.svg"] {
   width: 175px;
 }
+/* JQuery Page */
 img[src="img/logos/jquery-logo.svg"] {
   width: 270px;
 }
+/* JavaScript Page */
 img[src="img/logos/javascript-logo.svg"] {
   width: 140px;
 }
+/* Miscellaneous Page && About Page */
 img[src="img/logos/misc-logo.svg"],
 img[src="img/logos/about-logo.svg"] {
   width: 120px;
 }
-img[src="img/logos/about-logo.svg"] {
-  border-radius: 50%;
-}
+/* About Page */
 img[alt="Main Logo in SVG Format."] {
   width: 80px;
   margin-top: 1.25em;
 }
-/*
+/* About the Creator - Me */
 img[src="img/logos/about-logo.svg"] {
-  width: 200px;
-  margin-bottom: 32px;
-} */
+  border-radius: 50%;
+}
+/* Contact Page */
+img[src="img/logos/contact-logo.svg"] {
+  width: 125px;
+}
+.contact-icon {
+  width: 100px;
+}
+
+/* ---- Social Icons ---- */
+.footer-grid a img {
+  transition: transform 0.5s ease-out;
+  width: 32px;
+}
+.footer-grid a img:hover {
+  transform: rotate(360deg) scale(1.2);
+}
 
 /* ====================================
   About Page - Title page
@@ -47,13 +64,21 @@ img[src="img/about-picture.jpg"] {
   display: block;
   margin: 0 auto;
 }
+/* Contact Page */
+img[src="img/logos/contact-logo.svg"] {
+  width: 150px;
+}
+.contact-icon {
+  width: 100px;
+}
 
 #about-page h2,
 .creator-title,
 .h3-title {
   text-align: inherit !important;
 }
-#about-page h2 {
+#about-page h2,
+#contact-page h2 {
   margin: 1em 0;
 }
 .profile-description h3 {
@@ -69,8 +94,9 @@ img[src="img/about-picture.jpg"] {
 
 @media screen and (min-width: 768px) {
 
-  #about-page h2 {
-    margin: 2em 0 1em;
+  #about-page h2,
+  #contact-page h2 {
+    margin: 32px 0 16px;
   }
 
   .page-description {
@@ -98,6 +124,13 @@ img[src="img/about-picture.jpg"] {
   }
   img[src="img/about-picture.jpg"] {
     width: 225px;
+  }
+  /* Contact Page */
+  img[src="img/logos/contact-logo.svg"] {
+    width: 150px;
+  }
+  .contact-icon {
+    width: 125px;
   }
 }
 
@@ -150,5 +183,17 @@ img[src="img/about-picture.jpg"] {
   img[src="img/logos/misc-logo.svg"],
   img[src="img/logos/about-logo.svg"] {
     width: 160px;
+  }
+  /* Contact Page */
+  img[src="img/logos/contact-logo.svg"] {
+    width: 162px;
+  }
+  .contact-icon {
+    width: 150px;
+  }
+  /* Social Icons */
+  .footer-grid a img {
+    transition: transform 0.5s ease-out;
+    width: 36px;
   }
 }

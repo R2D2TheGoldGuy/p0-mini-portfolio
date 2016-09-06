@@ -115,6 +115,23 @@ a:hover.back-to-top {
 }
 
 /* ------------------------------------
+  Contact Page - Multiple Column Layout
+------------------------------------ */
+
+.row,
+.footer-grid,
+.social-icon-grid {
+  display: flex;
+  flex-direction: column;
+}
+.col {
+  text-align: center;
+}
+.social-icon-cell {
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------
   Navigation Media Queries - Flexbox
 ------------------------------------ */
 
@@ -164,14 +181,34 @@ a:hover.back-to-top {
     background: #33BFBF;
   }
 
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Contact Page - 3 Column Layout
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  .row,
+  .footer-grid,
+  .social-icon-grid {
+    flex-direction: row;
+  }
+  .col,
+  .footer-cell,
+  .social-icon-cell {
+    text-align: left;
+    flex: 1;
+  }
+
   /* ---------------------------------
     Footer - Tablet/Desktop Screens
   --------------------------------- */
-  .footer-grid {
+
+  .bottom-footer-grid {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  .social-icons {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
-    align-items: baseline !important;
   }
 }
 
@@ -217,7 +254,6 @@ a:hover.back-to-top {
   .background-space {
     padding: 120px 0 110px;
   }
-
 }
 
 /* ====================================
@@ -227,32 +263,32 @@ a:hover.back-to-top {
 .background-1 {
   background: linear-gradient(to bottom right, #2782F9, transparent 105%),
               linear-gradient(30deg, #446CB3, transparent),
-              url('../img/waves.png') center;
+              url('../img/background-images/waves.png') center;
 }
 .background-2 {
   background: linear-gradient(to right, #B24926, transparent 125%),
               linear-gradient(-90deg, #FAA523, transparent),
-              url('../img/pyramid.png') center;
+              url('../img/background-images/pyramid.png') center;
 }
 .background-3 {
   background: linear-gradient(to bottom right, #6B262C, transparent 100%),
               linear-gradient(0deg, #51272B, transparent),
-              url('../img/inflicted.png') center;
+              url('../img/background-images/inflicted.png') center;
 }
 .background-4 {
   background: linear-gradient(to bottom right, #1D5135, transparent 100%),
               linear-gradient(0deg, #17442C, transparent),
-              url('../img/shapes.png') center;
+              url('../img/background-images/shapes.png') center;
 }
 .background-5 {
   background: linear-gradient(to bottom right, #297384, transparent 100%),
               linear-gradient(30deg, #336E7B, transparent),
-              url('../img/triangles.png') center;
+              url('../img/background-images/triangles.png') center;
 }
 .background-6 {
   background: linear-gradient(to right, #91740A, #A89400, transparent 100%),
               linear-gradient(-45deg, #9E7A27, transparent),
-              url('../img/tiles.png') center;
+              url('../img/background-images/tiles.png') center;
 }
 
 .cell img {
@@ -321,19 +357,10 @@ a:hover.back-to-top {
 }
 
 /* ---- One Column Layout: iPhone5 to ---- */
-.footer-grid, /* Setting Flex Mode (Flex Container) */
-.bottom-footer .footer-grid,
-.footer-cell .footer-grid {
+.bottom-footer-grid {
   display: flex;
-}
-.footer-grid, /* Small Screens */
-.bottom-footer .footer-grid {
   flex-direction: column;
   align-items: center;
-}
-.footer-cell .footer-grid { /* The very bottom-footer*/
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /* 0000 Two Column Layout 0000 */
