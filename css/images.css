@@ -23,7 +23,7 @@ img[src="img/logos/about-logo.svg"] {
 /* About Page */
 img[alt="Main Logo in SVG Format."] {
   width: 80px;
-  margin-top: 1.25em;
+  margin: 1.25em 0 1em;
 }
 /* About the Creator - Me */
 img[src="img/logos/about-logo.svg"] {
@@ -43,7 +43,7 @@ img[src="img/logos/contact-logo.svg"] {
   width: 32px;
 }
 .footer-grid a img:hover {
-  transform: rotate(360deg) scale(1.2);
+  transform: rotate(360deg);
 }
 
 /* ====================================

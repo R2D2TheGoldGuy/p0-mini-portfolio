@@ -115,20 +115,36 @@ a:hover.back-to-top {
 }
 
 /* ------------------------------------
-  Contact Page - Multiple Column Layout
+  Contact/FOOTER Page - SMALL SCREENS
 ------------------------------------ */
-
 .row,
 .footer-grid,
-.social-icon-grid {
+.bottom-footer-grid {
   display: flex;
   flex-direction: column;
 }
+.footer-cell,
+.footer-inner-cell {
+  flex: 1;
+}
+/* CONTACT PAGE */
 .col {
   text-align: center;
 }
-.social-icon-cell {
+/* ---- One Column Layout: iPhone5 to ---- */
+.bottom-footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Social Media Icons */
+.social-icon-grid {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+}
+.social-icon-cell {
+  flex: 1;
 }
 
 /* ------------------------------------
@@ -144,6 +160,9 @@ a:hover.back-to-top {
 
 @media screen and (min-width: 768px) {
 
+  /* ---------------------------------
+    Back To Top BUTTON
+  --------------------------------- */
   a.back-to-top {
     bottom: 50px;
     right: 60px;
@@ -182,33 +201,26 @@ a:hover.back-to-top {
   }
 
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Contact Page - 3 Column Layout
+    Contact/Footer Page - TABLET SCREENS
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   .row,
-  .footer-grid,
-  .social-icon-grid {
+  .footer-grid {
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .col,
   .footer-cell,
-  .social-icon-cell {
+  .footer-inner-cell {
     text-align: left;
-    flex: 1;
+    flex: 1 50%; /* Tablet Screens */
   }
-
-  /* ---------------------------------
-    Footer - Tablet/Desktop Screens
-  --------------------------------- */
-
+  /* Deep Bottom Footer */
   .bottom-footer-grid {
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    flex-direction: row;
+    justify-content: space-between;
   }
-
-  .social-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+  .social-icon-cell {
+    flex: 1 20%;
   }
 }
 
@@ -253,6 +265,28 @@ a:hover.back-to-top {
   }
   .background-space {
     padding: 120px 0 110px;
+  }
+
+
+  /* ------------------------------------
+    Footer - Desktop Screens
+  ------------------------------------ */
+  .row,
+  .footer-grid,
+  .bottom-footer-grid {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-cell,
+  .footer-inner-cell {
+    flex: 1;
+  }
+  .col { /* CONTACT PAGE */
+    text-align: left;
+  }
+  /* SOCIAL MEDIA ICONS */
+  .social-icon-cell {
+    flex: 1 10%;
   }
 }
 
@@ -352,15 +386,6 @@ a:hover.back-to-top {
 .footer-nav {
   background: #2C3E50;
 }
-.footer-cell {
+.footer-inner-cell {
   margin: 1em 0;
 }
-
-/* ---- One Column Layout: iPhone5 to ---- */
-.bottom-footer-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 0000 Two Column Layout 0000 */
