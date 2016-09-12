@@ -305,29 +305,38 @@ a:hover.back-to-top {
               url('../img/background-images/pyramid.png') center;
 }
 .background-3 {
-  background: linear-gradient(to bottom right, #6B262C, transparent 100%),
-              linear-gradient(0deg, #51272B, transparent),
+  background: linear-gradient(to bottom left, #6B262C, transparent 60%),
+              linear-gradient(60deg, #51272B, transparent),
               url('../img/background-images/inflicted.png') center;
 }
 .background-4 {
-  background: linear-gradient(to bottom right, #1D5135, transparent 100%),
-              linear-gradient(0deg, #17442C, transparent),
+  background: linear-gradient(to bottom right, #07513D, transparent 100%),
+              linear-gradient(0deg, #0C7559, transparent),
               url('../img/background-images/shapes.png') center;
 }
 .background-5 {
-  background: linear-gradient(to bottom right, #297384, transparent 100%),
-              linear-gradient(30deg, #336E7B, transparent),
+  background: linear-gradient(to bottom left, #297384, transparent 100%),
+              linear-gradient(0deg, #336E7B, transparent),
               url('../img/background-images/triangles.png') center;
 }
 .background-6 {
-  background: linear-gradient(to right, #91740A, #A89400, transparent 100%),
-              linear-gradient(-45deg, #9E7A27, transparent),
-              url('../img/background-images/tiles.png') center;
+  background: linear-gradient(to bottom left, #91740A, transparent 90%),
+              linear-gradient(30deg, #9E7A27, transparent),
+              url('../img/background-images/asanoha.png') center;
+}
+
+.background-1 .cell img {
+  background: #3A539B;
+}
+.background-2 .cell img {
+  background: #1F3A93;
+}
+.background-3 .cell img {
+  background: rgba(174, 168, 211, 0.9);
 }
 
 .cell img {
   display: block;
-  background: #3A539B;
 }
 
 .responsive-image,
@@ -336,7 +345,7 @@ a:hover.back-to-top {
 }
 
 .cell {
-  margin: 1rem;
+  margin: 2rem 1rem;
   box-shadow: 1px 1px 8px 1px #000;
 }
 #Miscellaneous .cell {
@@ -355,6 +364,7 @@ a:hover.back-to-top {
     flex-direction: row;
   }
   .cell {
+    margin: 1rem;
     width: calc(50% - 2rem);
   }
 

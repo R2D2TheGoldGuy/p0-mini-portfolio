@@ -1,4 +1,15 @@
 /* ====================================
+  Hover Information - MAIN LOGO
+==================================== */
+
+img[alt="Mini Portfolio Official Logo"] {
+  transition: transform 0.5s ease-out;
+}
+img[alt="Mini Portfolio Official Logo"]:hover {
+  transform: rotate(-90deg);
+}
+
+/* ====================================
   Hover Information - CSS Page
 ==================================== */
 
@@ -160,7 +171,7 @@ h3 {
 	background: url('../img/live-preview.svg');
 	position: absolute;
 	left: 45%;
-	top: 35%;
+	top: 33%;
 }
 
 /* ---- Photo Overlay ---- */
@@ -190,14 +201,13 @@ h3 {
 }
 
 .section-3-button {
-	color: #4a89ca;
 	width: 70%;
 	font-weight: 700;
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 10px 0;
-	border: 2px solid #4a89ca;
+	border: 2px solid #E04A56;
 	border-radius: .5em;
 	margin: auto;
 }
@@ -217,18 +227,18 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0,0,0, .5);
 }
 
 .section-3-slide .section-3-button {
 	color: #fff;
-	padding: 20px 0;
-	background: rgba(74,137,202, .8);
+	padding: 15px 0;
+	background: #871935;
+  opacity: 0.95;
 	margin: 0;
 }
 .section-3-slide .section-3-overlay {
 	opacity: 1;
-	background: #345d88;
+	background: #770E28;
 }
 
 /* ---------------------------------
@@ -252,7 +262,7 @@ h3 {
 }
 .section-3-button:hover {
 	color: #fff;
-	background: #4a89ca;
+	background: #E04A56;
 }
 
 /* ---------------------------------
@@ -293,15 +303,20 @@ h3 {
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
-	padding: 20px 0;
+	padding: 15px 0;
 	border-radius: .5em;
-	background: rgba(74,137,202, .8);
+	background: #3B9169;
 	margin: .3em 0 0;
 }
 .misc-photo {
 	position: relative;
 }
-
+hr { /* How to add bottom shadow only */
+  max-width: 90%;
+  border: none;
+  outline: none;
+  box-shadow: 0 -5px 50px 10px rgba(0,0,0,.5);
+}
 /* ---- Photo Overlay ---- */
 .photo-desc {
 	color: #fff;
@@ -316,7 +331,7 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #345d88;
+	background: #396358;
 }
 
 /* =================================
@@ -324,10 +339,10 @@ h3 {
 ==================================== */
 
 .button {
-	transition: background .3s;
+	transition: background .5s;
 }
 .button:hover {
-	background: rgba(74,137,202, 1);
+	background: #0E8777;
 }
 
 /* =================================
