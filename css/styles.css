@@ -1,6 +1,51 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300|Roboto:300';
 
 /* ====================================
+  Basic Global Styles
+==================================== */
+
+.container { /* General container */
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.headline,
+.footer-nav .container,
+.bottom-footer .container {
+  padding: 0 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 300 1.0625em/1.5 'Lato', sans-serif;
+  background: #243A4F; /* Navigation Color */
+  color: #fff;
+	margin: 0;
+}
+h1 {
+  margin: 0;
+  font: bold 1.5em/1.5 'Roboto', sans-serif;
+}
+h2 {
+  margin: 0;
+  font: bold 1.25em/1.5 'Roboto', sans-serif;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.66s ease-out;
+}
+
+/* ====================================
   Back To Top Button - JQuery CDN
 ==================================== */
 
@@ -9,17 +54,16 @@ a.back-to-top {
   width: 55px;
   height: 55px;
   position: fixed;
-  bottom: 40px;
-  right: 50px;
+  bottom: 20px;
+  right: 100px;
   background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.67s;
-  box-shadow: 1px 1px 5px #282828;
+  transition: all 0.75s;
+  box-shadow: 0 0 4px #000;
   z-index: 999;
 }
-
 a:hover.back-to-top {
-  background-color: #3A539B;
+  background-color: #182D44;
 }
 
 /* ====================================
@@ -31,7 +75,6 @@ a:hover.back-to-top {
 	display: flex;
 	flex-direction: column;
 }
-
 .main-header {
 	padding: 1.5em 0;
 }
@@ -41,58 +84,156 @@ a:hover.back-to-top {
 	align-self: center;
 }
 .site-logo img {
-  width: 75px;
+  width: 50px;
   margin-bottom: -6px;
 }
 
 .navigation {
 	margin-top: 1em;
 }
-
 .navigation a {
 	display: block;
 	color: #fff;
   font: 300 1.125em/1.5 'Roboto', sans-serif;
 	text-align: center;
 	padding: .4em;
-	border-bottom: 1px solid #67809F;
-  transition: all 0.8s;
+  border-bottom: 1px solid #67809F;
+  transition: letter-spacing 0.4s ease-out, color 0.4s ease-out, border 0.5s ease, background 0.4s ease-out;
+}
+.navigation a:hover {
+	border-bottom-color: #33BFBF;
+  color: #33BFBF;
+  letter-spacing: 2px;
 }
 
-.navigation a:hover {
-  background: #182D44;
-	color: #fff;
-	border-bottom-color: #33BFBF;
+/* ---- Base Page Styles ---- */
+.background-space {
+  padding: 50px 0 40px;
+}
+.background-space .page-description {
+  padding: 32px 0 16px;
+}
+
+/* ------------------------------------
+  Contact/FOOTER Page - SMALL SCREENS
+------------------------------------ */
+.row,
+.footer-grid,
+.bottom-footer-grid {
+  display: flex;
+  flex-direction: column;
+}
+.footer-cell,
+.footer-inner-cell {
+  flex: 1;
+}
+/* CONTACT PAGE */
+.col {
+  text-align: center;
+}
+/* ---- One Column Layout: iPhone5 to ---- */
+.bottom-footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Social Media Icons */
+.social-icon-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.social-icon-cell {
+  flex: 1;
 }
 
 /* ------------------------------------
   Navigation Media Queries - Flexbox
 ------------------------------------ */
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 767px) {
+  a.back-to-top {
+    bottom: 15px;
+    right: 20px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+
+  /* ---------------------------------
+    Back To Top BUTTON
+  --------------------------------- */
+  a.back-to-top {
+    bottom: 50px;
+    right: 60px;
+  }
 	.main-header {
-	  padding: 1em 0;
+	  padding: 1em;
 		justify-content: flex-end;
 	}
-  /* .site-logo {
-       width: 140px;
-  } */
 	.navigation {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.navigation a {
-		border-bottom-color: transparent;
-	}
+
+  /***********************************
+    Cool Transition Hover Effect
+  ***********************************/
+	.navigation a,
   .navigation a:hover {
-    background: none;
+      background: none;
+      border-bottom-color: transparent;
+    }
+  .navigation a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    -webkit-transition: width .4s ease, background-color .4s ease;
+    -moz-transition: width .4s ease, background-color .4s ease;
+    transition: width .4s ease, background-color .4s ease;
+  }
+  .navigation a:hover::after {
+    width: 100%;
+    background: #33BFBF;
   }
 
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Contact/Footer Page - TABLET SCREENS
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  .row,
+  .footer-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .col,
+  .footer-cell,
+  .footer-inner-cell {
+    text-align: left;
+    flex: 1 50%; /* Tablet Screens */
+  }
+  /* Deep Bottom Footer */
+  .bottom-footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .social-icon-cell {
+    flex: 1 20%;
+  }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
+  h1 {
+    margin: 0;
+    font: bold 1.625em/1.5 'Roboto', sans-serif;
+  }
+  h2 {
+    margin: 0;
+    font: bold 1.375em/1.5 'Roboto', sans-serif;
+  }
 	.main-header {
 		flex-direction: row;
 	}
@@ -108,33 +249,90 @@ a:hover.back-to-top {
 		margin-right: .65em;
 	}
 
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Fixed Header - JQuery CDN
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  .fixed-navigation {
+    width: 100%;
+    position: fixed;
+    background: #22313F;
+    z-index: 999;
+    box-shadow: 0 0 10px #282828;
+  }
+  .overlap-space {
+    /* Similar to Bootstrap's Jumbotron default settings. */
+    padding-top: 202px !important; /* (-82px for carousel) 82px for navigation height, and 50px for page padding top/bottom. */
+  }
+  .background-space {
+    padding: 120px 0 110px;
+  }
+
+
+  /* ------------------------------------
+    Footer - Desktop Screens
+  ------------------------------------ */
+  .row,
+  .footer-grid,
+  .bottom-footer-grid {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-cell,
+  .footer-inner-cell {
+    flex: 1;
+  }
+  .col { /* CONTACT PAGE */
+    text-align: left;
+  }
+  /* SOCIAL MEDIA ICONS */
+  .social-icon-cell {
+    flex: 1 10%;
+  }
 }
 
 /* ====================================
   Responsive Gallery - Flexbox
 ==================================== */
 
-.background-space {
-  padding: 40px 0;
-}
-
 .background-1 {
-  background: #4B77BE;
+  background: linear-gradient(to bottom right, #2782F9, transparent 105%),
+              linear-gradient(30deg, #446CB3, transparent),
+              url('../img/background-images/waves.png') center;
 }
 .background-2 {
-  background: #E58585;
+  background: linear-gradient(to right, #B24926, transparent 125%),
+              linear-gradient(-90deg, #FAA523, transparent),
+              url('../img/background-images/pyramid.png') center;
 }
 .background-3 {
-  background: #D24D57;
+  background: linear-gradient(to bottom left, #6B262C, transparent 60%),
+              linear-gradient(60deg, #51272B, transparent),
+              url('../img/background-images/inflicted.png') center;
 }
 .background-4 {
-  background: #663399;
+  background: linear-gradient(to bottom right, #07513D, transparent 100%),
+              linear-gradient(0deg, #0C7559, transparent),
+              url('../img/background-images/shapes.png') center;
 }
 .background-5 {
-  background: darkolivegreen;
+  background: linear-gradient(to bottom left, #297384, transparent 100%),
+              linear-gradient(0deg, #336E7B, transparent),
+              url('../img/background-images/triangles.png') center;
 }
 .background-6 {
-  background: #272727;
+  background: linear-gradient(to bottom left, #91740A, transparent 90%),
+              linear-gradient(30deg, #9E7A27, transparent),
+              url('../img/background-images/asanoha.png') center;
+}
+
+.background-1 .cell img {
+  background: #3A539B;
+}
+.background-2 .cell img {
+  background: #1F3A93;
+}
+.background-3 .cell img {
+  background: rgba(174, 168, 211, 0.9);
 }
 
 .cell img {
@@ -147,7 +345,11 @@ a:hover.back-to-top {
 }
 
 .cell {
-  margin: 1rem;
+  margin: 2rem 1rem;
+  box-shadow: 1px 1px 8px 1px #000;
+}
+#Miscellaneous .cell {
+  box-shadow: none !important;
 }
 
 /* ------------------------------------
@@ -155,12 +357,14 @@ a:hover.back-to-top {
 ------------------------------------ */
 
 @media screen and (min-width: 600px) {
+
   .grid {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .cell {
+    margin: 1rem;
     width: calc(50% - 2rem);
   }
 
@@ -177,448 +381,21 @@ a:hover.back-to-top {
 ==================================== */
 
 .sticky-footer {
-  min-height: calc(100vh - 54px);
+  min-height: calc(100vh - 45px);
 }
-
-.bottom-footer,
 .footer-nav {
-  padding: 20px 0;
+  padding: 30px 0;
+}
+.footer-nav a:hover {
+  color: #33BFBF;
 }
 .bottom-footer {
+  padding: 20px 0;
   background: #22313F;
 }
 .footer-nav {
   background: #2C3E50;
 }
-
-@media screen and (min-width: 600px) {
-  .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center !important;
-  }
-  .footer-cell {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .footer-cell {
-    width: 25%;
-  }
-}
-
-/* ====================================
-  Basic Global Styles
-==================================== */
-
-.container { /* General container */
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-
-#css .css-headline,
-#JQuery .jquery-headline,
-#JavaScript .javascript-headline,
-#Miscellaneous .miscellaneous-headline,
-#about .container,
-#contact .container,
-.footer-nav .container,
-.bottom-footer .container {
-  padding: 0 2rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-body {
-  font: 300 1em/1.5 'Lato', sans-serif;
-  background: #243A4F; /* Navigation Color */
-  color: #fff;
-	margin: 0;
-}
-h1,
-h2 {
-  margin: 0;
-  font: 100 1.75em/1.5 'Roboto', sans-serif;
-}
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-a {
-  color: #656a6e;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-/* ---- Text Overlay Base Styles ---- */
-
-h3 {
-	margin: 0;
-}
-
-/* ------------------------------------
-  Hover Information - CSS Page
------------------------------------- */
-
-.caption {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 3px #000;
-    transition: box-shadow 0.5s ease 0.25s;
-}
-.caption:hover {
-    box-shadow: 0 0 9px 1px #FDE3A7;
-}
-.caption-media {
-    display: block;
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-.overlay-container {
-    margin: 0 auto;
-    padding: 0 2em;
-}
-.caption-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    margin: 0 auto 30px;
-    text-align: center;
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.75s ease;
-}
-.caption:hover .caption-overlay {
-    transform: translateY(0);
-}
-.caption-overlay-title {
-    margin: 0;
-    padding: 0 0 10px;
-    transition: transform .35s ease-out;
-}
-
-.caption:hover .caption-overlay-title {
-    transform: translateY(0);
-}
-.caption::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom right, #EB974E, #F27935);
-    opacity: 0;
-    transition: opacity 0.75s ease-out;
-}
-.caption:hover::before {
-    opacity: 1;
-}
-
-/* ====================================
-  Hover Information - JQuery Page
-==================================== */
-
-.photo-container {
-	text-align: center;
-}
-.photo {
-	position: relative;
-	overflow: hidden;
-}
-
-/* ---- Photo Overlay ---- */
-.photo-overlay {
-	color: #fff;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0,0,0, .65);
-}
-
-/* ---- Float clearfix ---- */
-.clearfix::after {
-	content: " ";
-	display: table;
-	clear: both;
-}
-
-/* ------------------------------------
-  JQuery Page - Photo Overlay Transition
------------------------------------- */
-
-.section-2-overlay {
-	opacity: 0;
-  transition: opacity .3s, background .4s, box-shadow .5s; /* Key - transition: <property><duraction><timing-function><delay>, opacity .5s ease-out .25s (this order is the best practice) */
-  /* OR transition-timing-function: ease-out; (helps set all property's timing function) */
-  /* Note: transition: opacity .5s; */
-  /* Note: transition: all .5s; Is the same as transition: .5s; (all is by default) */
-}
-.section-2-overlay:hover {
-	opacity: 1;
-  background: #0769ad;
-}
-
-/* ------------------------------------
-  JQuery Page - Button Transitions
------------------------------------- */
-
-.section-2-button {
-	color: #fff;
-	width: 75%;
-	font-weight: 700;
-	display: block;
-	text-decoration: none;
-	text-transform: uppercase;
-	background: #52B3D9;
-	padding: 16px 0;
-	border-radius: .5em;
-	margin: 0;
-	position: relative;
-  /* Button Transitions */
-  opacity: 0;
-  transition-property: opacity, background, box-shadow;
-  transition-duration: .66s;
-  transition-delay: .25s, .1s, 0s;
-}
-.section-2-button:hover {
-	background: #049372;
-  box-shadow: 0 0 0 3px #1E824C;
-}
-.section-2-overlay:hover .section-2-button {
-	opacity: 1;
-}
-.btn-icon {
-	transition-property: opacity, left;
-	transition-duration: .5s;
-	transition-delay: .3s, .5s; /* .3s refers to opacity, .5s refers to left */
-	transition-timing-function: ease-in-out, ease; /* ease-in-out refers to opacity, ease-out refers to left */
-}
-.section-2-button:hover .btn-icon {
-	opacity: 1;
-	left: 80%;
-}
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  JQuery Page - Base Styles
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
-.btn-icon {
-	opacity: 0;
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background: url('../img/live-preview.svg');
-	position: absolute;
-	left: 45%;
-	top: 34%;
-}
-
-/* ---- Photo Overlay ---- */
-.section-2-overlay {
-	color: #fff;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0,0,0, .65);
-}
-
-/* ====================================
-  Hover Animation - JavaScript Page
-==================================== */
-
-.section-3-photo {
-	position: relative;
-	overflow: hidden;
-}
-
-.section-3-button {
-	color: #4a89ca;
-	width: 70%;
-	font-weight: 700;
-	display: block;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding: 10px 0;
-	border: 2px solid #4a89ca;
-	border-radius: .5em;
-	margin: auto;
-}
-
-/* ---- Photo Overlay ---- */
-.section-3-overlay {
-	color: #fff;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-  /* Extra styling */
-	display: flex; /* For centering text inside .photo-overlay */
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0,0,0, .5);
-}
-
-.section-3-slide .section-3-button {
-	color: #fff;
-	padding: 20px 0;
-	background: rgba(74,137,202, .8);
-	margin: 0;
-}
-.section-3-slide .section-3-overlay {
-	opacity: 1;
-	background: #345d88;
-}
-
-/* ---------------------------------
-  Photo Overlay Transitions
------------------------------------- */
-
-.section-3-overlay {
-	opacity: 0;
-	transition: opacity .5s;
-}
-.section-3-overlay:hover {
-	opacity: 1;
-}
-
-/* ---------------------------------
-  Button Transitions
------------------------------------- */
-
-.section-3-button {
-	transition: background .3s, color .3s;
-}
-.section-3-button:hover {
-	color: #fff;
-	background: #4a89ca;
-}
-
-/* ---------------------------------
-  Image Transforms & Transitions
------------------------------------- */
-
-.section-3-slide .section-3-overlay,
-.section-3-slide img[class="section-3-img"] {
-  transition: transform .6s ease-out;
-}
-.section-3-slide .section-3-overlay {
-  transform: translateX(-100%);
-}
-.section-3-slide:hover .section-3-overlay {
-  transform: translateX(0);
-}
-.section-3-slide:hover img[class="section-3-img"] {
-  transform: translateX(100%);
-}
-
-/* =================================
-  3D Hover Information - Misc
-==================================== */
-
-.misc-photo-container {
-	text-align: center;
-}
-
-.misc-photo-container img {
- 	max-width: 100%;
- 	position: relative;
-	z-index: 100;
-}
-.button {
-	color: #fff;
-	width: 75%;
-	font-weight: 700;
-	display: block;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding: 20px 0;
-	border-radius: .5em;
-	background: rgba(74,137,202, .8);
-	margin: .3em 0 0;
-}
-.misc-photo {
-	position: relative;
-}
-
-/* ---- Photo Overlay ---- */
-.photo-desc {
-	color: #fff;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex; /* For centering text inside .photo-overlay */
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: #345d88;
-}
-
-/* =================================
-  Button Transitions
-==================================== */
-
-.button {
-	transition: background .3s;
-}
-.button:hover {
-	background: rgba(74,137,202, 1);
-}
-
-/* =================================
-  Photo 3D Transforms & Transitions
-==================================== */
-
-.misc-photo-container /* .content { */ { /* giving a perspective to every photo to its container will individually have the same perspective like the one in the middle photo, all 3 photos are now consistent with each other */
-  perspective: 1000px; /* Similar to the flex container, wrap this elements to make it 3d compatible */
-  /* perspective-origin: y x; */ /* sets the perspective from a different angle, 50% 50% makes it centered by default. */
-}
-.misc-photo { /* photo is the parent of side-a and side-b */
-  transition: transform 1.2s cubic-bezier(.55, -.62, .27, 1.2);
-  transform-style: preserve-3d; /* Makes .photo child elements 3d compatible. It will pass down 3d attributes to its children. */
-}
-.misc-photo:hover {
-  /* transform: rotateY(-180deg); */
-  transform: rotate3d(0, 1, 0, 180deg); /* rotate(x, y, z, <angle> */
-}
-.side-a,
-.side-b {
-  backface-visibility: hidden;
-}
-.side-b {
-  transform: rotateY(180deg);
+.footer-inner-cell {
+  margin: 1em 0;
 }

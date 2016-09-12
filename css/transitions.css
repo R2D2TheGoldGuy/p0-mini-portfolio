@@ -1,0 +1,370 @@
+/* ====================================
+  Hover Information - MAIN LOGO
+==================================== */
+
+img[alt="Mini Portfolio Official Logo"] {
+  transition: transform 0.5s ease-out;
+}
+img[alt="Mini Portfolio Official Logo"]:hover {
+  transform: rotate(-90deg);
+}
+
+/* ====================================
+  Hover Information - CSS Page
+==================================== */
+
+.caption {
+    position: relative;
+    overflow: hidden;
+}
+.caption-media {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.overlay-container {
+    margin: 0 auto;
+    padding: 0 2em;
+}
+.caption-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+}
+.caption:hover .caption-overlay {
+    transform: translateY(0);
+}
+.caption:hover .caption-overlay-title {
+    transform: translateY(0);
+}
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #e34f26, #E87E04);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.caption:hover::before {
+    opacity: 1;
+}
+
+/* ---- Text Overlay Base Styles ---- */
+h3 {
+	margin: 0;
+}
+
+/* ====================================
+  Hover Information - JQUERY PAGE
+==================================== */
+
+.photo-container {
+	text-align: center;
+}
+.photo {
+	position: relative;
+	overflow: hidden;
+}
+
+/* ---- Photo Overlay ---- */
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .65);
+}
+
+/* ---- Float clearfix ---- */
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ------------------------------------
+  JQuery Page - Photo Overlay Transition
+------------------------------------ */
+
+.section-2-overlay {
+	opacity: 0;
+  transition: opacity .3s, background .4s, box-shadow .5s; /* Key - transition: <property><duraction><timing-function><delay>, opacity .5s ease-out .25s (this order is the best practice) */
+  /* OR transition-timing-function: ease-out; (helps set all property's timing function) */
+  /* Note: transition: opacity .5s; */
+  /* Note: transition: all .5s; Is the same as transition: .5s; (all is by default) */
+}
+.section-2-overlay:hover {
+	opacity: 1;
+  background: #0769ad;
+}
+
+/* ------------------------------------
+  JQuery Page - Button Transitions
+------------------------------------ */
+
+.section-2-button {
+	color: #fff;
+	width: 75%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #52B3D9;
+	padding: 16px 0;
+	border-radius: .5em;
+	margin: 0;
+	position: relative;
+  /* Button Transitions */
+  opacity: 0;
+  transition-property: opacity, background, box-shadow;
+  transition-duration: .4s;
+  transition-delay: .2s, 0s;
+  transition-timing-function: ease;
+}
+.section-2-button:hover {
+	background: #049372;
+  box-shadow: 0 0 0 3px #1E824C;
+}
+.section-2-overlay:hover .section-2-button {
+	opacity: 1;
+}
+.btn-icon {
+	transition-property: opacity, left;
+	transition-duration: .4s;
+	transition-delay: .2s, .4s; /* .2s refers to opacity, .4s refers to left */
+	transition-timing-function: ease-out, ease; /* ease-in-out refers to opacity, ease-out refers to left */
+}
+.section-2-button:hover .btn-icon {
+	opacity: 1;
+	left: 75%;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  JQuery Page - Base Styles
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.btn-icon {
+	opacity: 0;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url('../img/live-preview.svg');
+	position: absolute;
+	left: 45%;
+	top: 33%;
+}
+
+/* ---- Photo Overlay ---- */
+.section-2-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .65);
+}
+
+/* ====================================
+  Hover Animation - JavaScript Page
+==================================== */
+
+.section-3-photo {
+	position: relative;
+	overflow: hidden;
+}
+
+.section-3-button {
+	width: 70%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 0;
+	border: 2px solid #E04A56;
+	border-radius: .5em;
+	margin: auto;
+}
+
+/* ---- Photo Overlay ---- */
+.section-3-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+  /* Extra styling */
+	display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-3-slide .section-3-button {
+	color: #fff;
+	padding: 15px 0;
+	background: #871935;
+  opacity: 0.95;
+	margin: 0;
+}
+.section-3-slide .section-3-overlay {
+	opacity: 1;
+	background: #770E28;
+}
+
+/* ---------------------------------
+  Photo Overlay Transitions
+------------------------------------ */
+
+.section-3-overlay {
+	opacity: 0;
+	transition: opacity .5s;
+}
+.section-3-overlay:hover {
+	opacity: 1;
+}
+
+/* ---------------------------------
+  Button Transitions
+------------------------------------ */
+
+.section-3-button {
+	transition: background .3s, color .3s;
+}
+.section-3-button:hover {
+	color: #fff;
+	background: #E04A56;
+}
+
+/* ---------------------------------
+  Image Transforms & Transitions
+------------------------------------ */
+
+.section-3-slide .section-3-overlay,
+.section-3-slide img[class="section-3-img"] {
+  transition: transform .6s ease-out;
+}
+.section-3-slide .section-3-overlay {
+  transform: translateX(-100%);
+}
+.section-3-slide:hover .section-3-overlay {
+  transform: translateX(0);
+}
+.section-3-slide:hover img[class="section-3-img"] {
+  transform: translateX(100%);
+}
+
+/* =================================
+  3D Hover Information - Misc
+==================================== */
+
+.misc-photo-container {
+	text-align: center;
+}
+
+.misc-photo-container img {
+ 	max-width: 100%;
+ 	position: relative;
+	z-index: 100;
+}
+.button {
+	color: #fff;
+	width: 75%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 15px 0;
+	border-radius: .5em;
+	background: #3B9169;
+	margin: .3em 0 0;
+}
+.misc-photo {
+	position: relative;
+}
+hr { /* How to add bottom shadow only */
+  max-width: 90%;
+  border: none;
+  outline: none;
+  box-shadow: 0 -5px 50px 10px rgba(0,0,0,.5);
+}
+/* ---- Photo Overlay ---- */
+.photo-desc {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #396358;
+}
+
+/* =================================
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .5s;
+}
+.button:hover {
+	background: #0E8777;
+}
+
+/* =================================
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.misc-photo-container /* .content { */ { /* giving a perspective to every photo to its container will individually have the same perspective like the one in the middle photo, all 3 photos are now consistent with each other */
+  perspective: 1000px; /* Similar to the flex container, wrap this elements to make it 3d compatible */
+  /* perspective-origin: y x; */ /* sets the perspective from a different angle, 50% 50% makes it centered by default. */
+}
+.misc-photo { /* photo is the parent of side-a and side-b */
+  transition: transform 1.2s cubic-bezier(.55, -.62, .27, 1.2);
+  transform-style: preserve-3d; /* Makes .photo child elements 3d compatible. It will pass down 3d attributes to its children. */
+}
+.misc-photo:hover {
+  /* transform: rotateY(-180deg); */
+  transform: rotate3d(0, 1, 0, 180deg); /* rotate(x, y, z, <angle> */
+}
+.side-a,
+.side-b {
+  backface-visibility: hidden;
+}
+.side-b {
+  transform: rotateY(180deg);
+}

@@ -10,59 +10,66 @@
         <!-- My Styles -->
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/transitions.css" rel="stylesheet" type="text/css">
+        <link href="css/images.css" rel="stylesheet" type="text/css">
         <!--/ Note: I did not use Bootstrap or any css Framework because it would be too easy, I want to challenge myself. -->
     </head>
-    <body>
+    <body id="home">
         <div class="sticky-footer">
-
-            <div class="container">
-                <header class="main-header">
-                    <div class="site-logo">
-                        <a href="#"><img src="img/logo.svg" alt="Mini Portfolio Official Logo"></a>
-                    </div>
-                    <ul class="navigation">
-                        <li><a href="#css">CSS</a></li>
-                        <li><a href="#JQuery">JQuery</a></li>
-                        <li><a href="#JavaScript">JavaScript</a></li>
-                        <li><a href="#Miscellaneous">Miscellaneous</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </header>
+            <div class="fixed-navigation"><!-- Fixed Header using Plain CSS -->
+                <div class="container">
+                    <header class="main-header">
+                        <div class="site-logo">
+                            <a href="#home"><img src="img/logo.svg" alt="Mini Portfolio Official Logo"></a>
+                        </div>
+                        <ul class="navigation">
+                            <li class="menu-underline"><a href="#css">CSS</a></li>
+                            <li><a href="#JQuery">JQuery</a></li>
+                            <li><a href="#JavaScript">JavaScript</a></li>
+                            <li><a href="#Miscellaneous">Miscellaneous</a></li>
+                            <li><a href="#about-page">About</a></li>
+                            <li><a href="#contact-page">Contact</a></li>
+                        </ul>
+                    </header>
+                </div>
             </div>
 
             <!-- Insert JQuery carousel plug here. Do the Treehouse JQuery Plugins Course.  -->
 
-            <div id="css" class="background-space background-1">
-                <div class="container css-headline">
-                    <h1>CSS</h1>
-                    <p>Technologies include: SASS, Compass, Bootstrap, Foundations, and utilizing the latest CSS3 features </p>
+            <div id="css" class="background-space background-1 overlap-space">
+                <div class="container headline">
+                    <img class="page-logo" src="img/logos/html5-css3-logo.svg" alt="html5 and css3 logo in svg format">
+                    <div class="page-description">
+                        <h2>CSS Projects Involve: SASS, Compass, Post CSS, Bootstrap, Foundations, and CSS3 features.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.</p>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="grid">
                         <div class="cell">
-                            <a href="https://kenchung1996.github.io/sticky-footer" target="_blank">
+                            <a href="https://kenchung1996.github.io/responsive-navbar" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/responsive-navbar.svg" class="responsive-image caption-media" alt="Hi">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">Sticky Footer</h3>
-                                            <p>I've used the css calc function to get the footer to stick to the bottom,
-                                            without using flexbox or any css frameworks.</p>
+                                            <h3 class="caption-overlay-title">Responsive Navbar</h3>
+                                            <p>Flexbox is an amazing css3 feature to use,
+                                            responsive web design and layouts have never been easier.</p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="cell">
-                            <a href="https://kenchung1996.github.io/fullscreen-slider" target="_blank">
+                            <a href="https://kenchung1996.github.io/sticky-footer" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/sticky-footer.svg" class="responsive-image caption-media" alt="Hi">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">CSS Carousel</h3>
-                                            <p>This Slider/Carousel only has css code,
-                                            its uses no javascript which means there are no arrow indicators or bullets.</p>
+                                            <h3 class="caption-overlay-title">Sticky Footer</h3>
+                                            <p>The CSS calc function is a good technique to make a sticky footer,
+                                            one declaration is all you need.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -71,26 +78,54 @@
                         <div class="cell">
                             <a href="https://kenchung1996.github.io/basic-layout" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/basic-layout.svg" class="responsive-image caption-media" alt="Hi">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
                                             <h3 class="caption-overlay-title">Basic Layout</h3>
-                                            <p>This is a static website which only uses HTML and CSS,
-                                            it also uses semantic markup and is fully responsive.</p>
+                                            <p>A static website using only HTML and CSS,
+                                            it uses semantic html5 markup and responsive media queries.</p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="cell">
-                            <a href="https://kenchung1996.github.io/responsive-navbar" target="_blank">
+                            <a href="https://kenchung1996.github.io/fullscreen-slider" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/css-carousel.svg" class="responsive-image caption-media" alt="Hi">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">Responsive Navbar</h3>
-                                            <p>Using flexbox to make a responsive nav,
-                                            this project helped me understand the basics of responsive web design.</p>
+                                            <h3 class="caption-overlay-title">CSS Carousel</h3>
+                                            <p>This carousel uses only css code,
+                                            no javascript, arrow indicators or bullets was used.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="http://kenchung1996.github.io/css-accordion" target="_blank">
+                                <div class="caption">
+                                    <img src="img/thumbnails/css/css-accordion.svg" class="responsive-image caption-media" alt="Hi">
+                                    <div class="caption-overlay">
+                                        <div class="overlay-container">
+                                            <h3 class="caption-overlay-title">CSS Accordion Menus</h3>
+                                            <p>An alternative for a JavaScript accordion.
+                                            A lot of clever css was used.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="https://kenchung1996.github.io/modal-window/" target="_blank">
+                                <div class="caption">
+                                    <img src="img/thumbnails/css/modal-window.svg" class="responsive-image caption-media" alt="Hi">
+                                    <div class="caption-overlay">
+                                        <div class="overlay-container">
+                                            <h3 class="caption-overlay-title">CSS Modal Window</h3>
+                                            <p>A different approach to make a JavaScript Modal Popup Window,
+                                            this is a another clever way to use css3.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,11 +134,25 @@
                         <div class="cell">
                             <a href="https://kenchung1996.github.io/animated-gallery/" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/css-interactions.svg" class="responsive-image caption-media" alt="Hi">
+                                    <div class="caption-overlay">
+                                        <div class="overlay-container">
+                                            <h3 class="caption-overlay-title">Transitions and Transforms</h3>
+                                            <p>I've improved my gallery using CSS3 Transitions and Transforms, this gave a better UX to the site.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="" target="_blank">
+                                <div class="caption">
+                                    <img src="img/thumbnails/css/css-animations.svg" class="responsive-image caption-media" alt="My first Bootstrap 4 project!">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
                                             <h3 class="caption-overlay-title">CSS Animations</h3>
-                                            <p>Transitions and Transforms are amazing features in CSS3.</p>
+                                            <p>Bootstrap 4 is the next big update in web development.
+                                            Let's look at all these new features, updates, and changes.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -112,11 +161,12 @@
                         <div class="cell">
                             <a href="" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/svg-animations.svg" class="responsive-image caption-media" alt="Hi">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">CSS calc() function</h3>
-                                            <p>Coming soon!</p>
+                                            <h3 class="caption-overlay-title">SVG Animations</h3>
+                                            <p>Its really interesting how SVG supports interactivity and animations.
+                                            In this project we'll look at a few exmaples.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -125,37 +175,38 @@
                         <div class="cell">
                             <a href="" target="_blank">
                                 <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
-                                    <div class="caption-overlay">
-                                        <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">CSS Accordion Menus</h3>
-                                            <p>Coming soon!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank">
-                                <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
-                                    <div class="caption-overlay">
-                                        <div class="overlay-container">
-                                            <h3 class="caption-overlay-title">CSS Modal Window</h3>
-                                            <p>Coming soon!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank">
-                                <div class="caption">
-                                    <img src="http://placehold.it/800x800" class="responsive-image caption-media" alt="Hi">
+                                    <img src="img/thumbnails/css/bootstrap-4.svg" class="responsive-image caption-media" alt="My first Bootstrap 4 project!">
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
                                             <h3 class="caption-overlay-title">Bootstrap 4</h3>
-                                            <p>Coming soon!</p>
+                                            <p>Bootstrap 4 is the next big update in web development.
+                                            Let's look at all these new features, updates, and changes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="" target="_blank">
+                                <div class="caption">
+                                    <img src="img/thumbnails/css/css-to-sass.svg" class="responsive-image caption-media" alt="My first Bootstrap 4 project!">
+                                    <div class="caption-overlay">
+                                        <div class="overlay-container">
+                                            <h3 class="caption-overlay-title">CSS to Sass</h3>
+                                            <p>In this project I've decided to use the Lake Tahoe Website to convert its existing CSS into Sass.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="" target="_blank">
+                                <div class="caption">
+                                    <img src="img/thumbnails/css/introduction-to-postcss.svg" class="responsive-image caption-media" alt="My first Bootstrap 4 project!">
+                                    <div class="caption-overlay">
+                                        <div class="overlay-container">
+                                            <h3 class="caption-overlay-title">Introduction to PostCSS</h3>
+                                            <p>This new post processor is a very exciting technology. Let's look at what PostCSS can do in this project.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -164,102 +215,151 @@
                     </div>
                 </div>
             </div>
-
             <div id="JQuery" class="background-space background-2">
-                <div class="container jquery-headline">
-                    <h1>JQuery</h1>
-                    <p>Projects Involve: JQuery Plugins, Mobile Web Apps, and mini projects.</p>
+                <div class="container headline">
+                    <img class="page-logo" src="img/logos/jquery-logo.svg" alt="jQuery logo in SVG Format">
+                    <div class="page-description">
+                        <h2>JQuery Projects Involve - JQuery Plugins, Mobile Web Apps, and Mini Projects.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.</p>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="grid">
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="photo">
-                                    <img src="http://placehold.it/800x800" alt="A photo of a grizzly bear" class="img-responsive">
+                                    <img src="img/thumbnails/jquery/spoiler-revealer.svg" alt="A photo of a grizzly bear" class="img-responsive">
                                     <div class="section-2-overlay">
-                                      <h3>Spoiler Revealer</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-2-button">preview<span class="btn-icon"></span>
-                                      </a>
+                                        <h3>Spoiler Revealer</h3>
+                                        <p>The button will reveal some text if clicked, this project barely has code
+                                        but it helped me understand basic jQuery concepts.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="photo">
-                                    <img src="http://placehold.it/800x800" alt="A mountainous landscape" class="img-responsive">
+                                    <img src="img/thumbnails/jquery/basic-lightbox.svg" alt="A mountainous landscape" class="img-responsive">
                                     <div class="section-2-overlay">
-                                      <h3>Basic Lightbox</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-2-button">preview<span class="btn-icon"></span>
-                                      </a>
+                                        <h3>Basic Lightbox</h3>
+                                        <p>A very simple hand-coded lightbox.
+                                        Adding keys or arrow indicators will require more advanced jQuery.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="photo">
-                                    <img src="http://placehold.it/800x800" alt="Yosemite national park" class="img-responsive">
+                                    <img src="img/thumbnails/jquery/password-confirmation-form.svg" alt="Yosemite national park" class="img-responsive">
                                     <div class="section-2-overlay">
-                                      <h3>Yosemite National Park</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-2-button">live preview<span class="btn-icon"></span>
-                                      </a>
+                                        <h3>Password Confirmation Form</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/simple-drawing-application.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>Simple Drawing Application</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/call-to-action-buttons.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>Call To Action Buttons</h3>
+                                        <p>Making call to action buttons using jQuery may be a good alternative compared
+                                        to traditional buttons.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/sticky-navigation-bar.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>Sticky Navigation Bar</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/jquery-carousel.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>jQuery Carousel</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/my-jquery-plugin.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>My jQuery Plugin</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="photo">
+                                    <img src="img/thumbnails/jquery/mobile-web-app.svg" alt="Yosemite national park" class="img-responsive">
+                                    <div class="section-2-overlay">
+                                        <h3>Mobile Web App</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-2-button">preview<span class="btn-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="JavaScript" class="background-space background-3">
-                <div class="container javascript-headline">
-                    <h1>JavaScript</h1>
-                    <p>Projects Involve: AngularJS, ExpressJS, MongoDB, NodeJS, React, and TypeScript. </p>
+                <div class="container headline">
+                    <img class="page-logo" src="img/logos/javascript-logo.svg" alt="JavaScript logo in SVG format">
+                    <div class="page-description">
+                        <h2>JavaScript Projects Involve: AngularJS, ExpressJS, MongoDB, NodeJS, React, and TypeScript. </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.</p>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="grid">
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="section-3-photo section-3-slide">
-                                    <img src="http://placehold.it/800x800" alt="Going step by step" class="section-3-img">
+                                    <img src="img/thumbnails/javascript/browser.svg" alt="A hot air balloon" class="section-3-img">
                                     <div class="section-3-overlay">
-                                      <h3>Step by Step</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-3-button">download</a>
+                                        <h3>JavaScript Quiz App</h3>
+                                        <p>This mini project will help me learn the fundamentals of OOP in JavaScript. I will be learning while doing.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,11 +367,11 @@
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="section-3-photo section-3-slide">
-                                    <img src="http://placehold.it/800x800" alt="The Brooklyn Bridge" class="section-3-img">
+                                    <img src="img/thumbnails/javascript/music-player.svg" alt="A hot air balloon" class="section-3-img">
                                     <div class="section-3-overlay">
-                                      <h3>Brooklyn Bridge</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-3-button">download</a>
+                                        <h3>JavaScript Music Player</h3>
+                                        <p>While learning OOP in JavaScript I will also be applying these concepts to a music player app.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,208 +379,311 @@
                         <div class="cell">
                             <div class="photo-container">
                                 <div class="section-3-photo section-3-slide">
-                                    <img src="http://placehold.it/800x800" alt="A hot air balloon" class="section-3-img">
+                                    <img src="img/thumbnails/javascript/angularjs-symbol.svg" alt="Going step by step" class="section-3-img">
                                     <div class="section-3-overlay">
-                                      <h3>Up in the Air</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="section-3-button">download</a>
+                                        <h3>To-Do List Application</h3>
+                                        <p>I've learned the basics for Angular.js and applied that knowledge to build a basic To-Do List Application.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/nodejs.svg" alt="The Brooklyn Bridge" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>Dynamic Site with Node.js</h3>
+                                        <p>I'm building a simple dynamic site with Node.js while learning as I build my skills and knowledge.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/mean-stack.svg" alt="A hot air balloon" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>Intro to MEAN Stack</h3>
+                                        <p>A simple e-commerce store using the MEAN Stack. This project is from the official MongoDB Organisation.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/mean-stack-logo.svg" alt="A hot air balloon" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>Basic MEAN Application</h3>
+                                        <p>I'm learning the MEAN stack and applying my skills and knowledge to a basic MEAN application.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/microsoft-logo.svg" alt="A hot air balloon" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>TypeScript Project</h3>
+                                        <p>I'm planning on learning TypeScript and apply that knowledge into a project I have not yet decided.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/react-logo.svg" alt="A hot air balloon" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>Intro to React</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                            <div class="photo-container">
+                                <div class="section-3-photo section-3-slide">
+                                    <img src="img/thumbnails/javascript/express.svg" alt="A hot air balloon" class="section-3-img">
+                                    <div class="section-3-overlay">
+                                        <h3>REST API With Express</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="section-3-button">coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
 
             <div id="Miscellaneous" class="background-space background-4">
-                <div class="container miscellaneous-headline">
-                    <h1>Miscellaneous</h1>
-                    <p>Projects Involve: C#, iOS, Mobile Game Development, Graphic Design, and Content Creation.</p>
+                <div class="container headline">
+                    <img class="page-logo" src="img/logos/misc-logo.svg" alt="Miscellaneous Logo in SVG Format.">
+                    <div class="page-description">
+                        <h2>Miscellaneous Projects Involve: C#, iOS, Mobile Game Development, Graphic Design, and Content Creation.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.</p>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="grid">
                         <div class="cell">
                             <div class="misc-photo-container">
                                 <div class="misc-photo">
-                                    <img class="side-a" src="http://placehold.it/800x800" alt="Planet Earth">
+                                    <img class="side-a" src="img/coming-soon.svg" alt="Dazzling Auroras over Earth">
                                     <div class="photo-desc side-b">
-                                      <h3>Planet Earth</h3>
-                                      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                      <a href="#" class="button">download</a>
+                                        <h3>Dazzling Auroras</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="button">coming soon</a>
                                     </div>
                                 </div>
+                                <hr>
                             </div>
                         </div>
                         <div class="cell">
                             <div class="misc-photo-container">
                                 <div class="misc-photo">
-                                    <img class="side-a" src="http://placehold.it/800x800" alt="International Space Station">
+                                    <img class="side-a" src="img/coming-soon.svg" alt="Dazzling Auroras over Earth">
                                     <div class="photo-desc side-b">
-                                        <h3>The Space Station</h3>
+                                        <h3>Dazzling Auroras</h3>
                                         <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                                        <a href="#" class="button">download</a>
+                                        <a href="#" class="button">coming soon</a>
                                     </div>
                                 </div>
+                                <hr>
                             </div>
                         </div>
                         <div class="cell">
                             <div class="misc-photo-container">
-                        				<div class="misc-photo">
-                          				  <img class="side-a" src="http://placehold.it/800x800" alt="Dazzling Auroras over Earth">
-                          				  <div class="photo-desc side-b">
-                            					  <h3>Dazzling Auroras</h3>
-                            					  <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                            						<a href="#" class="button">download</a>
-                          					</div>
-                        				</div>
-                      			</div>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
-                        </div>
-                        <div class="cell">
-                            <a href="" target="_blank"><img src="http://placehold.it/800x800" class="responsive-image"></a>
+                                <div class="misc-photo">
+                                    <img class="side-a" src="img/coming-soon.svg" alt="Dazzling Auroras over Earth">
+                                    <div class="photo-desc side-b">
+                                        <h3>Dazzling Auroras</h3>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                        <a href="#" class="button">coming soon</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="about" class="background-space background-5">
-                <div class="container">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
+            <div id="about-page" class="background-space background-5">
+                <div class="container headline">
+                    <!-- <div> -->
+                    <img class="page-logo" src="img/logos/about-logo.svg" alt="A picture that symbolizes the about page.">
+                    <h2>About The Project, Creator, Mission, and More</h2>
+                    <!-- </div> -->
+                    <p>These projects are basically small projects I make to practice and experiment with. Whenever I learn new skills and technologies,
+                    I always make sure I can apply it to a small project, so that I can get the opportunity to practice and play around with it.
+                    These small projects are known as mini projects, and this is where I store all of my mini projects onto my mini portfolio website.</p>
+                    <div class="page-description">
+                      <div class="about-me">
+                          <div class="profile-description">
+                              <h3>The Creator</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                              Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
+                              Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
+                              et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
+                              elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus.</p>
+                          </div>
+                          <div class="profile-picture">
+                            <img src="img/about-picture.jpg" alt="Profile Picture of Kendrick Chung">
+                          </div>
+                      </div>
+                    </div>
+                    <div class="page-description">
+                        <div class="h3-title">
+                            <h3>Purpose and Career</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
+                        Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
+                        et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
+                        elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
+                        Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
+                        Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
+                        maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
+                    </div>
+                    <div class="page-description">
+                        <div class="h3-title">
+                            <h3>Main Portfolio</h3>
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                        Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
+                        Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
+                        et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
+                        elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
+                        Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
+                        Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
+                        maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut. [INSERT MODAL WINDOW HERE].</p>
+                    </div>
                 </div>
             </div>
 
-            <div id="contact" class="background-space background-6">
-                <div class="container">
-                    <h1>Contact</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
-                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.
-                    Mauris non sapien vel leo ultricies eleifend ac sit amet ante. Aenean maximus, eros vel condimentum rutrum, felis mauris tincidunt nulla,
-                    et molestie erat lectus quis neque. Aliquam quam odio, mollis id dapibus vel, pulvinar eu sem. Integer porta, mauris nec maximus
-                    elementum, tellus urna vestibulum velit, quis auctor elit odio vitae tellus. Ut purus nunc, maximus ut ante at, ultrices viverra tortor.
-                    Aliquam erat volutpat. Maecenas mattis neque pulvinar, scelerisque libero ac, cursus odio. Proin ornare vel eros non blandit.
-                    Maecenas in convallis mi. Donec purus orci, efficitur vitae tortor vitae, faucibus malesuada dui. Nulla purus ante, commodo ut purus ac,
-                    maximus rutrum eros. Ut nibh magna, sollicitudin ut est ut, condimentum congue nunc.</p>
-                </div>
+            <div id="contact-page" class="background-space background-6">
+                <div class="container headline">
+                    <img class="page-logo" src="img/logos/contact-logo.svg" alt="A picture that symbolizes the about page.">
+                    <h2>Contact</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam ut elit ac arcu euismod accumsan vitae at sapien.
+                    Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti.
+                    Donec massa est, viverra ac elementum sagittis, tincidunt vel augue.</p>
+                    <div class="page-description">
+                        <div class="row">
+                            <div class="col">
+                                <img class="contact-icon" src="img/mobile.svg" alt="">
+                                <p>0416 169 586</p>
+                                <p><a href="tel:0416169586" class="call-to-action">Call Me</a></p>
+                            </div>
+                            <div class="col">
+                                <img class="contact-icon" src="img/email.svg" alt="">
+                                <p>kenchung9001@gmail.com</p>
+                                <p><a href="mailto:kenchung9001@gmail.com">Email Me</a></p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
             </div>
 
         </div><!-- End of Sticky Wrap Footer -->
 
+        <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.788743484191!2d145.2643389512827!3d-37.81841697965219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63a544815e99d%3A0xc5bbe22fd7774629!2s13+Tintern+Ave%2C+Bayswater+North+VIC+3153!5e0!3m2!1sen!2sau!4v1472745100031"
+         scrolling="no" width="100%" height="480" frameborder="0" style="border:0; margin-bottom: -6px !important;" allowfullscreen>
+        </iframe>
 
         <div class="footer-nav">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-cell">
-                        <h2>Lorem ipsum</h2>
+                        <h2>Mini Portfolio</h2>
+                        <img src="img/logo.svg" alt="Main Logo in SVG Format.">
                     </div>
                     <div class="footer-cell">
-                        <h2>Lorem ipsum</h2>
+                        <h2>Mini Projects</h2>
                         <ul>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
+                            <li class="footer-inner-cell"><a href="#css" target="_blank">CSS</a></li>
+                            <li class="footer-inner-cell"><a href="#JQuery" target="_blank">JQuery</a></li>
+                            <li class="footer-inner-cell"><a href="#JavaScript" target="_blank">JavaScript</a></li>
+                            <li class="footer-inner-cell"><a href="#Miscellaneous" target="_blank">Miscellaneous</a></li>
                         </ul>
                     </div>
                     <div class="footer-cell">
-                        <h2>Lorem ipsum</h2>
+                        <h2>External Links</h2>
                         <ul>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
+                            <li class="footer-inner-cell"><a href="" target="_blank">Main Portfolio</a></li>
+                            <li class="footer-inner-cell"><a href="" target="_blank">Blog</a></li>
+                            <li class="footer-inner-cell"><a href="" target="_blank">YouTube Channel</a></li>
+                            <li class="footer-inner-cell"><a href="http://blog.teamtreehouse.com/techdegree-student-ken-chung" target="_blank">My Treehouse Success</a></li>
                         </ul>
                     </div>
                     <div class="footer-cell">
-                        <h2>Lorem ipsum</h2>
-                        <ul>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                        </ul>
+                        <h2>Connect With Me</h2>
+                        <p>Feel free to follow me on social media. I'm always happy to make friends or do business with people.</p>
+                        <div class="social-icon-grid">
+                            <div class="social-icon-cell">
+                              <a href="https://www.facebook.com/kendrick.chung" target="_blank"><img src="img/social-icons/facebook.svg" alt="facebook social icon"></a>
+                            </div>
+                            <div class="social-icon-cell">
+                              <a href="https://twitter.com/KenChung1996" target="_blank"><img src="img/social-icons/twitter.svg" alt="twitter social icon"></a>
+                            </div>
+                            <div class="social-icon-cell">
+                              <a href="https://plus.google.com/u/0/111022781015356514699" target="_blank"><img src="img/social-icons/google-plus.svg" alt="google plus social icon"></a>
+                            </div>
+                            <div class="social-icon-cell">
+                              <a href="https://www.linkedin.com/in/kendrickchung" target="_blank"><img src="img/social-icons/linkedin.svg" alt="linkedin social icon"></a>
+                            </div>
+                            <div class="social-icon-cell">
+                              <a href="https://github.com/kenchung1996" target="_blank"><img src="img/social-icons/github.svg" alt="github social icon"></a>
+                            </div>
+                            <div class="social-icon-cell">
+                              <a href="http://codepen.io/kenc96/" target="_blank"><img src="img/social-icons/codepen.svg" alt="codepen social icon"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <footer class="bottom-footer">
             <div class="container">
-                <span>Designed and Developed by Kendrick Chung. All rights reserved &copy;</span>
+                <div class="bottom-footer-grid">
+                    <div class="bottom-footer-cell">
+                        <span>Designed &amp; developed by Ken Chung</span>
+                    </div>
+                    <div class="bottom-footer-cell">
+                        <span>Copyright &copy;</span>
+                    </div>
+                    <div class="bottom-footer-cell">
+                        <span>All rights reserved 2016</span>
+                    </div>
+                </div>
             </div>
         </footer>
 
     <!-- Using JQuery CDN for Back To Top Button, and more features in the future! -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
     crossorigin="anonymous" type="text/javascript"></script>
-    <script   src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
     crossorigin="anonymous" type="text/javascript"></script>
     <!--/ Note: This is all hand-coded JQuery, I did not use any plugins or frameworks. -->
 
-    <!-- Font Awesome Framework - CDN -->
-    <script src="https://use.fontawesome.com/472a6b50b9.js" type="text/javascript"></script>
     <!-- JQuery CDN From CSS Tricks -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -495,7 +698,7 @@
                 if (target.length) {
                 $('html,body').animate({
                     scrollTop: target.offset().top
-                }, 1280);
+                }, 1440);
                 return false;
                 }
             }
@@ -524,6 +727,7 @@
             return false;
         });
     </script>
-    <script src="js/overlay.js" type="text/javascript"></script>
+    <!-- Font Awesome Framework - CDN -->
+    <script src="https://use.fontawesome.com/472a6b50b9.js" type="text/javascript"></script>
     </body>
 </html>
