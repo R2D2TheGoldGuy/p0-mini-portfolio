@@ -98,12 +98,10 @@ a:hover.back-to-top {
 	text-align: center;
 	padding: .4em;
   border-bottom: 1px solid #67809F;
-  transition: letter-spacing 0.4s ease-out, color 0.4s ease-out, border 0.5s ease, background 0.4s ease-out;
 }
 .navigation a:hover {
 	border-bottom-color: #33BFBF;
   color: #33BFBF;
-  letter-spacing: 2px;
 }
 
 /* ---- Base Page Styles ---- */
@@ -305,8 +303,8 @@ a:hover.back-to-top {
               url('../img/background-images/pyramid.png') center;
 }
 .background-3 {
-  background: linear-gradient(to bottom left, #6B262C, transparent 60%),
-              linear-gradient(60deg, #51272B, transparent),
+  background: linear-gradient(to bottom, #51272B, transparent 50%),
+              linear-gradient(30deg, #51272B, transparent),
               url('../img/background-images/inflicted.png') center;
 }
 .background-4 {
@@ -315,13 +313,13 @@ a:hover.back-to-top {
               url('../img/background-images/shapes.png') center;
 }
 .background-5 {
-  background: linear-gradient(to bottom left, #297384, transparent 100%),
-              linear-gradient(0deg, #336E7B, transparent),
+  background: linear-gradient(to bottom left, #297384, transparent 90%),
+              linear-gradient(30deg, #336E7B, transparent),
               url('../img/background-images/triangles.png') center;
 }
 .background-6 {
   background: linear-gradient(to bottom left, #91740A, transparent 90%),
-              linear-gradient(30deg, #9E7A27, transparent),
+              linear-gradient(15deg, #9E7A27, transparent),
               url('../img/background-images/asanoha.png') center;
 }
 
