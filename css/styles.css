@@ -23,6 +23,7 @@ body {
   background: #243A4F; /* Navigation Color */
   color: #fff;
 	margin: 0;
+  text-align: center;
 }
 h1 {
   margin: 0;
@@ -259,12 +260,11 @@ a:hover.back-to-top {
   }
   .overlap-space {
     /* Similar to Bootstrap's Jumbotron default settings. */
-    padding-top: 202px !important; /* (-82px for carousel) 82px for navigation height, and 50px for page padding top/bottom. */
+    padding-top: 120px !important; /* (-82px for carousel) 82px for navigation height, and 50px for page padding top/bottom. */
   }
   .background-space {
     padding: 120px 0 110px;
   }
-
 
   /* ------------------------------------
     Footer - Desktop Screens
@@ -396,4 +396,128 @@ a:hover.back-to-top {
 }
 .footer-inner-cell {
   margin: 1em 0;
+}
+
+/* ====================================
+  Slick.js Plugin
+==================================== */
+
+.slick-dots {
+  bottom: 20px !important;
+}
+.slick-dots li button::before {
+  font-size: 16px;
+  color: white;
+}
+.slick-dots li.slick-active button::before {
+  color: white;
+}
+
+.blue {
+  background: #282828;
+}
+.orange {
+  background: crimson;
+}
+.green {
+  background: darkslateblue;
+}
+.yellow {
+  background: darkgrey;
+}
+
+.grid-full {
+  width: 100%;
+  float: left;
+}
+
+/* Repeated Code */
+.slide h2 {
+  text-align: center;
+  margin: 25% 0 20px;
+  color: #fff;
+  text-align: center;
+}
+.slide p {
+  width: 60%;
+  margin: 0 20%;
+  font-size: 1.25em;
+  color: #fff;
+  text-align: center;
+}
+.cta-button {
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .grid-half {
+    width: 80%;
+    margin: 0px 10% 40px;
+    float: left;
+  }
+  .slide img {
+    width: 80%;
+    margin: 0 10% 40px;
+  }
+  .slick-dots {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .grid-half {
+    width: 50% !important;
+    float: left;
+  }
+  .slick-carousel {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 40px;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide h2 {
+    text-align: center;
+    margin: 25% 0 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .slide p {
+    width: 60%;
+    margin: 0 20% 40px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+  }
+  .slide img {
+    width: 50%;
+    margin: 100px 50% 100px 10% !important;
+  }
+  .cta-button {
+    border: 2px solid #D5DDE4;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #777B7E;
+    transition: .35s;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .slide .cta-button {
+    color: #fff;
+    border-color: #fff;
+    opacity: .6;
+  }
+  .slide .cta-button:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-full {
+    padding-top: 60px;
+  }
 }

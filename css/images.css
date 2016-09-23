@@ -6,6 +6,7 @@
 /* CSS Page */
 img[src="img/logos/html5-css3-logo.svg"] {
   width: 175px;
+  padding-top: 60px;
 }
 /* JQuery Page */
 img[src="img/logos/jquery-logo.svg"] {
@@ -111,6 +112,7 @@ img[src="img/logos/contact-logo.svg"] {
 
   img[src="img/logos/html5-css3-logo.svg"] {
     width: 200px;
+    padding-top: 130px;
   }
   img[src="img/logos/jquery-logo.svg"] {
     width: 360px;

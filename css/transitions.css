@@ -2,11 +2,13 @@
   Hover Information - MAIN LOGO
 ==================================== */
 
-img[alt="Mini Portfolio Official Logo"] {
-  transition: transform 0.5s ease-out;
-}
-img[alt="Mini Portfolio Official Logo"]:hover {
-  transform: rotate(-90deg);
+@media screen and (min-width: 1024px) {
+  img[alt="Mini Portfolio Official Logo"] {
+    transition: transform 0.5s ease-out;
+  }
+  img[alt="Mini Portfolio Official Logo"]:hover {
+    transform: rotate(-90deg);
+  }
 }
 
 /* ====================================

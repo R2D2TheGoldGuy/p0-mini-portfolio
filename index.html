@@ -6,15 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Mini Portfolio</title>
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+
+        <!-- Slick.js Plugin -->
+        <link href="js/slick/slick.css" rel="stylesheet">
+        <link href="js/slick/slick-theme.css" rel="stylesheet">
 
         <!-- My Styles -->
-        <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="css/transitions.css" rel="stylesheet" type="text/css">
         <link href="css/images.css" rel="stylesheet" type="text/css">
         <!--/ Note: I did not use Bootstrap or any css Framework because it would be too easy, I want to challenge myself. -->
     </head>
-    <body id="home">
+    <body>
         <div class="sticky-footer">
             <div class="fixed-navigation"><!-- Fixed Header using Plain CSS -->
                 <div class="container">
@@ -33,12 +37,56 @@
                     </header>
                 </div>
             </div>
-
             <!-- Insert JQuery carousel plugin here -->
-
-            <div id="css" class="background-space background-1 overlap-space">
+            <div id="home">
+                <div class="grid-full">
+                    <div class="slick-carousel"><!-- Container to contain the carousel -->
+                        <div class="slide blue">
+                            <div class="grid-half">
+                                <h2>DailyFeed</h2>
+                                <p>The worldest easiest to use cross device chat app</p>
+                                <a href="#" class="cta-button">Check it Out</a>
+                            </div>
+                            <div class="grid-half">
+                                <img src="img/carousel-images/slide-1.jpg" alt="" />
+                            </div>
+                        </div><!--/Slide 1-->
+                        <div class="slide orange">
+                            <div class="grid-half">
+                                <h2>ChitChat</h2>
+                                <p>The worldest easiest to use cross device chat app</p>
+                                <a href="#" class="cta-button">Check it Out</a>
+                            </div>
+                            <div class="grid-half">
+                                <img src="img/carousel-images/slide-2.jpg" alt="" />
+                            </div>
+                        </div><!--/Slide 2-->
+                        <div class="slide green">
+                            <div class="grid-half">
+                                <h2>MixTape</h2>
+                                <p>An app to search, create and share mixtapes</p>
+                                <a href="#" class="cta-button">Check it Out</a>
+                            </div>
+                            <div class="grid-half">
+                                <img src="img/carousel-images/slide-3.jpg" alt="" />
+                            </div>
+                        </div><!--/Slide 3-->
+                        <div class="slide yellow">
+                            <div class="grid-half">
+                                <h2>KITT</h2>
+                                <p>The worldest easiest to use cross device chat app</p>
+                                <a href="#" class="cta-button">Check it Out</a>
+                            </div>
+                            <div class="grid-half">
+                                <img src="img/carousel-images/slide-4.jpg" alt="" />
+                            </div>
+                        </div><!--/Slide 4-->
+                    </div>
+                </div>
+            </div>
+            <div class="background-space background-1 overlap-space">
                 <div class="container headline">
-                    <img class="page-logo" src="img/logos/html5-css3-logo.svg" alt="html5 and css3 logo in svg format">
+                    <img id="css" class="page-logo" src="img/logos/html5-css3-logo.svg" alt="html5 and css3 logo in svg format">
                     <div class="page-description">
                         <h2>CSS Projects Involve: SASS, Compass, Post CSS, Bootstrap, Foundations, and CSS3 features.</h2>
                         <p>Praesent ac commodo nisl, id mattis ligula. Suspendisse potenti. Donec massa est, viverra ac elementum sagittis.
@@ -151,8 +199,7 @@
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
                                             <h3 class="caption-overlay-title">CSS Animations</h3>
-                                            <p>Bootstrap 4 is the next big update in web development.
-                                            Let's look at all these new features, updates, and changes.</p>
+                                            <p>A fast boat travelling across the sea, CSS keyframes allows a smooth animation to make this happen.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +212,7 @@
                                     <div class="caption-overlay">
                                         <div class="overlay-container">
                                             <h3 class="caption-overlay-title">SVG Animations</h3>
-                                            <p>Its really interesting how SVG supports interactivity and animations.
+                                            <p>Its interesting how SVG supports interactivity and animations.
                                             In this project we'll look at a few exmaples.</p>
                                         </div>
                                     </div>
@@ -711,6 +758,15 @@
 
     <!-- JQuery CDN From CSS Tricks -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script>
+    $('.slick-carousel').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+      dots: true
+    });
+    </script>
     <script type="text/javascript">
         /* ====================================
             Smooth Scrolling Nav - CSS Tricks
@@ -752,7 +808,5 @@
             return false;
         });
     </script>
-    <!-- Font Awesome Framework - CDN -->
-    <script src="https://use.fontawesome.com/472a6b50b9.js" type="text/javascript"></script>
     </body>
 </html>
