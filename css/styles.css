@@ -258,10 +258,6 @@ a:hover.back-to-top {
     z-index: 999;
     box-shadow: 0 0 10px #282828;
   }
-  .overlap-space {
-    /* Similar to Bootstrap's Jumbotron default settings. */
-    padding-top: 120px !important; /* (-82px for carousel) 82px for navigation height, and 50px for page padding top/bottom. */
-  }
   .background-space {
     padding: 120px 0 110px;
   }

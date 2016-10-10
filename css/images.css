@@ -112,7 +112,7 @@ img[src="img/logos/contact-logo.svg"] {
 
   img[src="img/logos/html5-css3-logo.svg"] {
     width: 200px;
-    padding-top: 130px;
+    padding-top: 120px;
   }
   img[src="img/logos/jquery-logo.svg"] {
     width: 360px;
@@ -139,7 +139,7 @@ img[src="img/logos/contact-logo.svg"] {
 @media screen and (min-width: 1024px) {
 
   .page-description {
-    text-align: inherit;
+    text-align: left;
   }
   .page-logo {
     margin: 0;
@@ -156,6 +156,7 @@ img[src="img/logos/contact-logo.svg"] {
     justify-content: space-between;
     margin-top: 0;
     margin-bottom: 48px;
+    text-align: left;
   }
   img[src="img/about-picture.jpg"] {
     width: 250px;
