@@ -139,10 +139,7 @@ img[src="img/logos/contact-logo.svg"] {
 @media screen and (min-width: 1024px) {
 
   .page-description {
-    text-align: left;
-  }
-  .page-logo {
-    margin: 0;
+    text-align: center;
   }
 
   /* ========================================
