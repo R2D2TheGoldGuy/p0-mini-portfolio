@@ -1,8 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:300|Roboto:300';
-
 /* ====================================
   Basic Global Styles
 ==================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 .container { /* General container */
   margin: 0 auto;
@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 body {
-  font: 300 1.0625em/1.5 'Lato', sans-serif;
+  font: 300 1em/1.5 'Nunito', sans-serif;
   background: #243A4F; /* Navigation Color */
   color: #fff;
 	margin: 0;
@@ -27,11 +27,11 @@ body {
 }
 h1 {
   margin: 0;
-  font: bold 1.5em/1.5 'Roboto', sans-serif;
+  font: bold 1.5em/1.5 'Nunito', sans-serif;
 }
 h2 {
   margin: 0;
-  font: bold 1.25em/1.5 'Roboto', sans-serif;
+  font: bold 1.25em/1.5 'Nunito', sans-serif;
 }
 ul,
 li {
@@ -95,7 +95,7 @@ a:hover.back-to-top {
 .navigation a {
 	display: block;
 	color: #fff;
-  font: 300 1.125em/1.5 'Roboto', sans-serif;
+  font: 300 1.125em/1.5 'Nunito', sans-serif;
 	text-align: center;
 	padding: .4em;
   border-bottom: 1px solid #67809F;
@@ -227,11 +227,11 @@ a:hover.back-to-top {
 
   h1 {
     margin: 0;
-    font: bold 1.625em/1.5 'Roboto', sans-serif;
+    font: bold 1.625em/1.5 'Nunito', sans-serif;
   }
   h2 {
     margin: 0;
-    font: bold 1.375em/1.5 'Roboto', sans-serif;
+    font: bold 1.375em/1.5 'Nunito', sans-serif;
   }
 	.main-header {
 		flex-direction: row;
@@ -469,7 +469,7 @@ a:hover.back-to-top {
   .slick-carousel {
     width: 100%;
     height: 100%;
-    margin: 0 auto 40px;
+    margin: 0 auto;
   }
   .slide {
     width: 100%;
