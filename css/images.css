@@ -1,6 +1,6 @@
 .page-logo {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 32px;
 }
 
 /* CSS Page */
@@ -59,7 +59,6 @@ img[src="img/logos/contact-logo.svg"] {
 img[src="img/about-picture.jpg"] {
   width: 200px;
   border-radius: 50%;
-  box-shadow: 0px 4px 12px 1px #22313F !important;
 }
 img[src="img/about-picture.jpg"] {
   display: block;
@@ -72,21 +71,9 @@ img[src="img/logos/contact-logo.svg"] {
 .contact-icon {
   width: 100px;
 }
-
-#about-page h2,
-.creator-title,
-.h3-title {
-  text-align: inherit !important;
-}
 #about-page h2,
 #contact-page h2 {
   margin: 1em 0;
-}
-.profile-description h3 {
-  padding: 48px 0 0px;
-}
-.h3-title {
-  margin: 2em 0 1em;
 }
 
 #about-page .page-description {
@@ -96,8 +83,9 @@ img[src="img/logos/contact-logo.svg"] {
 @media screen and (min-width: 768px) {
 
   #about-page h2,
-  #contact-page h2 {
-    margin: 32px 0 16px;
+  #contact-page h2,
+  .h3-title {
+    margin: 2em 0;
   }
 
   .page-description {

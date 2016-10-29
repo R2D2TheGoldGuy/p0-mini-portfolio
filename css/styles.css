@@ -59,12 +59,14 @@ a.back-to-top {
   right: 100px;
   background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.75s;
+  transition: all 0.8s;
   box-shadow: 0 0 4px #000;
+  border: 2px solid white;
   z-index: 999;
 }
 a:hover.back-to-top {
-  background-color: #182D44;
+  background-color: #2E435E;
+  box-shadow: 0px 0px 10px 1px aqua;
 }
 
 /* ====================================
@@ -126,10 +128,26 @@ a:hover.back-to-top {
 .footer-inner-cell {
   flex: 1;
 }
+
 /* CONTACT PAGE */
 .col {
   text-align: center;
+  padding: 30px 60px;
 }
+.col p {
+  padding: 5px 0;
+}
+p[class="contact-button"] {
+  padding: 20px 0;
+  font-size: 1.125em;
+  background-color: #58B7A2;
+  border-radius: 12px;
+  transition: background-color 0.5s;
+}
+p[class="contact-button"]:hover {
+  background-color: #396358;
+}
+
 /* ---- One Column Layout: iPhone5 to ---- */
 .bottom-footer-grid {
   display: flex;
@@ -155,6 +173,9 @@ a:hover.back-to-top {
     bottom: 15px;
     right: 20px;
   }
+
+  /* footer {margin: 10px;} */
+
 }
 
 @media screen and (min-width: 768px) {
@@ -207,7 +228,16 @@ a:hover.back-to-top {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .col,
+  .col {
+    flex: 1 33%;
+  }
+  .col p {
+    padding: 10px 0;
+  }
+  p[class="contact-button"] {
+    padding: 20px 0;
+    font-size: 1.25em;
+  }
   .footer-cell,
   .footer-inner-cell {
     text-align: left;
@@ -227,11 +257,14 @@ a:hover.back-to-top {
 
   h1 {
     margin: 0;
-    font: bold 1.625em/1.5 'Nunito', sans-serif;
+    font: bold 1.875em/1.5 'Nunito', sans-serif;
   }
   h2 {
     margin: 0;
-    font: bold 1.375em/1.5 'Nunito', sans-serif;
+    font: bold 1.625em/1.5 'Nunito', sans-serif;
+  }
+  p {
+    font-size: 1.125em;
   }
 	.main-header {
 		flex-direction: row;
@@ -254,9 +287,8 @@ a:hover.back-to-top {
   .fixed-navigation {
     width: 100%;
     position: fixed;
-    background: #22313F;
+    background: #304354;
     z-index: 999;
-    box-shadow: 0 0 10px #282828;
   }
   .background-space {
     padding: 120px 0 100px;
@@ -275,9 +307,6 @@ a:hover.back-to-top {
   .footer-inner-cell {
     flex: 1;
   }
-  .col { /* CONTACT PAGE */
-    text-align: left;
-  }
   /* SOCIAL MEDIA ICONS */
   .social-icon-cell {
     flex: 1 10%;
@@ -289,34 +318,22 @@ a:hover.back-to-top {
 ==================================== */
 
 .background-1 {
-  background: linear-gradient(to right, #2782F9, transparent 100%),
-              linear-gradient(30deg, #446CB3, transparent),
-              url('../img/background-images/waves.png') center;
+  background: #DBAB74;
 }
 .background-2 {
-  background: linear-gradient(to right, #0769ad, transparent 100%),
-              linear-gradient(-90deg, #0769ad, transparent),
-              url('../img/background-images/pyramid.png') center;
+  background: #6088F7;
 }
 .background-3 {
-  background: linear-gradient(to bottom right, #51272B, transparent 80%),
-              linear-gradient(-60deg, #51272B, transparent),
-              url('../img/background-images/inflicted.png') center;
+  background: #BA5555;
 }
 .background-4 {
-  background: linear-gradient(to bottom right, #07513D, transparent 100%),
-              linear-gradient(0deg, #0C7559, transparent),
-              url('../img/background-images/shapes.png') center;
+  background: #F1F9A4;
 }
 .background-5 {
-  background: linear-gradient(to bottom left, #297384, transparent 90%),
-              linear-gradient(30deg, #336E7B, transparent),
-              url('../img/background-images/triangles.png') center;
+  background: #5D69AF;
 }
 .background-6 {
-  background: linear-gradient(to bottom left, #91740A, transparent 90%),
-              linear-gradient(15deg, #9E7A27, transparent),
-              url('../img/background-images/asanoha.png') center;
+  background: #519178;
 }
 
 .background-1 .cell img {
@@ -340,7 +357,7 @@ a:hover.back-to-top {
 
 .cell {
   margin: 2rem 1rem;
-  box-shadow: 1px 1px 8px 1px #000;
+  box-shadow: 0 0 20px 1px #333;
 }
 #Miscellaneous .cell {
   box-shadow: none !important;
@@ -388,7 +405,7 @@ a:hover.back-to-top {
   background: #22313F;
 }
 .footer-nav {
-  background: #2C3E50;
+  background: #37495E;
 }
 .footer-inner-cell {
   margin: 1em 0;
@@ -410,16 +427,16 @@ a:hover.back-to-top {
 }
 
 .blue {
-  background: #282828;
+  background: cadetblue;
 }
 .orange {
-  background: crimson;
+  background: #67809F;
 }
 .green {
-  background: darkslateblue;
+  background: #336E7B;
 }
 .yellow {
-  background: darkgrey;
+  background: slateblue;
 }
 
 .grid-full {
