@@ -83,7 +83,9 @@ img[src="img/logos/contact-logo.svg"] {
 @media screen and (min-width: 768px) {
 
   #about-page h2,
-  #contact-page h2,
+  #contact-page h2 {
+    margin: 1.5em 0;
+  }
   .h3-title {
     margin: 2em 0;
   }
@@ -144,7 +146,7 @@ img[src="img/logos/contact-logo.svg"] {
     text-align: left;
   }
   img[src="img/about-picture.jpg"] {
-    width: 250px;
+    width: 200px;
   }
   .profile-description h3 {
     padding: 0 0 16px;
@@ -163,7 +165,7 @@ img[src="img/logos/contact-logo.svg"] {
     width: 225px;
   }
   img[src="img/logos/jquery-logo.svg"] {
-    width: 440px;
+    width: 450px;
   }
   img[src="img/logos/javascript-logo.svg"] {
     width: 180px;

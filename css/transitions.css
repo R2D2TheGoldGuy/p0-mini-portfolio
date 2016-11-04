@@ -117,7 +117,7 @@ h3 {
 }
 .section-2-overlay:hover {
 	opacity: 1;
-  background: #0769ad;
+  background: #52B3D9;
 }
 
 /* ------------------------------------
@@ -131,7 +131,7 @@ h3 {
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
-	background: #52B3D9;
+	background: #6DC4A0;
 	padding: 16px 0;
 	border-radius: .5em;
 	margin: 0;
@@ -139,13 +139,13 @@ h3 {
   /* Button Transitions */
   opacity: 0;
   transition-property: opacity, background, box-shadow;
-  transition-duration: .4s;
-  transition-delay: .2s, 0s;
+  transition-duration: .5s;
+  transition-delay: .25s, 0s;
   transition-timing-function: ease;
 }
 .section-2-button:hover {
-	background: #049372;
-  box-shadow: 0 0 0 3px #1E824C;
+	background: #1CB5A3;
+  box-shadow: 0 0 0 3px #4EAA96;
 }
 .section-2-overlay:hover .section-2-button {
 	opacity: 1;
@@ -209,7 +209,6 @@ h3 {
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 10px 0;
-	border: 2px solid #E04A56;
 	border-radius: .5em;
 	margin: auto;
 }
@@ -234,13 +233,13 @@ h3 {
 .section-3-slide .section-3-button {
 	color: #fff;
 	padding: 15px 0;
-	background: #871935;
+	background: #9B4148;
   opacity: 0.95;
 	margin: 0;
 }
 .section-3-slide .section-3-overlay {
 	opacity: 1;
-	background: #770E28;
+	background: #6B2937;
 }
 
 /* ---------------------------------
@@ -260,11 +259,10 @@ h3 {
 ------------------------------------ */
 
 .section-3-button {
-	transition: background .3s, color .3s;
+	transition: background 0.8s;
 }
 .section-3-button:hover {
-	color: #fff;
-	background: #E04A56;
+	background: #DD5671;
 }
 
 /* ---------------------------------
@@ -307,7 +305,7 @@ h3 {
 	text-transform: uppercase;
 	padding: 15px 0;
 	border-radius: .5em;
-	background: #3B9169;
+	background: #C45C79;
 	margin: .3em 0 0;
 }
 .misc-photo {
@@ -333,7 +331,7 @@ hr { /* How to add bottom shadow only */
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #396358;
+	background: #475B70;
 }
 
 /* =================================
@@ -344,7 +342,7 @@ hr { /* How to add bottom shadow only */
 	transition: background .5s;
 }
 .button:hover {
-	background: #0E8777;
+	background: #D383A2;
 }
 
 /* =================================

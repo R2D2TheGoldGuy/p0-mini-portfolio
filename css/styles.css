@@ -59,7 +59,7 @@ a.back-to-top {
   right: 100px;
   background: #000 url('../img/up-arrow.png') no-repeat center 43%;
   text-indent: -9999px;
-  transition: all 0.8s;
+  transition: all 0.5s;
   box-shadow: 0 0 4px #000;
   border: 2px solid white;
   z-index: 999;
@@ -327,7 +327,7 @@ p[class="contact-button"]:hover {
   background: #BA5555;
 }
 .background-4 {
-  background: #F1F9A4;
+  background: #8AA9CE;
 }
 .background-5 {
   background: #5D69AF;
@@ -340,10 +340,13 @@ p[class="contact-button"]:hover {
   background: #3A539B;
 }
 .background-2 .cell img {
-  background: #1F3A93;
+  background: #7FA0C6;
 }
 .background-3 .cell img {
-  background: rgba(174, 168, 211, 0.9);
+  background: #DDAB9D;
+}
+.background-4 .cell img {
+  background: #DDAB9D;
 }
 
 .cell img {
@@ -357,7 +360,6 @@ p[class="contact-button"]:hover {
 
 .cell {
   margin: 2rem 1rem;
-  box-shadow: 0 0 20px 1px #333;
 }
 #Miscellaneous .cell {
   box-shadow: none !important;
@@ -427,10 +429,10 @@ p[class="contact-button"]:hover {
 }
 
 .blue {
-  background: cadetblue;
+  background: #67809F;
 }
 .orange {
-  background: #67809F;
+  background: cadetblue;
 }
 .green {
   background: #336E7B;
