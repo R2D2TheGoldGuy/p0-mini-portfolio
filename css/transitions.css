@@ -55,7 +55,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #e34f26, #E87E04);
+    background: #4D81E2;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -131,7 +131,7 @@ h3 {
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
-	background: #6DC4A0;
+	background: #78BF7F;
 	padding: 16px 0;
 	border-radius: .5em;
 	margin: 0;
@@ -144,8 +144,8 @@ h3 {
   transition-timing-function: ease;
 }
 .section-2-button:hover {
-	background: #1CB5A3;
-  box-shadow: 0 0 0 3px #4EAA96;
+	background: #CE8285;
+  box-shadow: 0 0 0 2px #BA6D72;
 }
 .section-2-overlay:hover .section-2-button {
 	opacity: 1;

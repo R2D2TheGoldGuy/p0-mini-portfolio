@@ -318,7 +318,7 @@ p[class="contact-button"]:hover {
 ==================================== */
 
 .background-1 {
-  background: #DBAB74;
+  background: #E0A767;
 }
 .background-2 {
   background: #6088F7;
@@ -337,7 +337,7 @@ p[class="contact-button"]:hover {
 }
 
 .background-1 .cell img {
-  background: #3A539B;
+  background: #E2D0A5;
 }
 .background-2 .cell img {
   background: #7FA0C6;
@@ -346,7 +346,7 @@ p[class="contact-button"]:hover {
   background: #DDAB9D;
 }
 .background-4 .cell img {
-  background: #DDAB9D;
+  background: #475B70;
 }
 
 .cell img {

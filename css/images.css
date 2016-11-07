@@ -73,7 +73,7 @@ img[src="img/logos/contact-logo.svg"] {
 }
 #about-page h2,
 #contact-page h2 {
-  margin: 1em 0;
+  margin: 1.25em 0 1em;
 }
 
 #about-page .page-description {
@@ -84,7 +84,7 @@ img[src="img/logos/contact-logo.svg"] {
 
   #about-page h2,
   #contact-page h2 {
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em;
   }
   .h3-title {
     margin: 2em 0;
