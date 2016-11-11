@@ -144,8 +144,7 @@ h3 {
   transition-timing-function: ease;
 }
 .section-2-button:hover {
-	background: #CE8285;
-  box-shadow: 0 0 0 2px #BA6D72;
+	background: #60C165;
 }
 .section-2-overlay:hover .section-2-button {
 	opacity: 1;
